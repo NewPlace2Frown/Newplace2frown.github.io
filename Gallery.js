@@ -15,7 +15,7 @@ let imageCount = imageCounts[currentPageName]; // get the image count for the cu
 const photos = [];
 for (let i = 1; i <= imageCount; i++) {
   let num = i.toString().padStart(3, '0');
-  let filePath = `media/Gallery/${currentPageName}/Photo${num}.jpeg`;
+  let filePath = `Media/Gallery/${currentPageName}/Photo${num}.jpeg`;
   photos.push(filePath);
 } 
 
