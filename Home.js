@@ -21,6 +21,16 @@ function prevPhoto() {
   photo.src = photos[currentPhoto];
 }
 
+function startSlideshow() {
+  // Start the slideshow timer
+  slideshowTimer = setInterval(nextPhoto, 10000); // 10 seconds interval
+}
+
+function stopSlideshow() {
+  // Stop the slideshow timer
+  clearInterval(slideshowTimer);
+}
+
 slideshow.addEventListener("click", nextPhoto);
 
 window.addEventListener("keydown", function(event) {
@@ -43,3 +53,6 @@ for (i = 0; i < toggler.length; i++) {
     this.classList.toggle("caret-down");
   });
 }
+
+// Start the slideshow
+startSlideshow();
