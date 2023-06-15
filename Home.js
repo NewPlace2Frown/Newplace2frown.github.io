@@ -1,6 +1,7 @@
 const slideshow = document.getElementById("slideshow");
 const photo = document.getElementById("photo");
-const pauseLink = document.getElementById("pauseLink");
+const pauseLink = document.getElementById('pauseButton');  // ensure correct ID
+
 
 
 const photos = [];
@@ -51,6 +52,7 @@ function toggleSlideshow() {
     pauseLink.textContent = "Pause Slideshow (10s)";
   }
 }
+
 
 slideshow.addEventListener("click", nextPhoto);
 
