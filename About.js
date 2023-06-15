@@ -1,7 +1,18 @@
+const aboutImage = document.getElementById("aboutImage");
+
+function getRandomAboutImage() {
+  const imageCount = 3; // The number of images in the "Media/About/" folder
+  const randomIndex = Math.floor(Math.random() * imageCount) + 1;
+  const filePath = `Media/About/about${randomIndex}.jpeg`;
+  return filePath;
+}
+
+// Set a random image on page load
+aboutImage.src = getRandomAboutImage();
+
+
 const slideshow = document.getElementById("slideshow");
 const photo = document.getElementById("photo");
-const pauseLink = document.getElementById("pauseLink");
-
 
 const photos = [];
 for (let i = 1; i <= 135; i++) {
@@ -13,8 +24,6 @@ for (let i = 1; i <= 135; i++) {
 let currentPhoto = 0;
 photo.src = photos[currentPhoto];
 
-let slideshowTimer = null;
-
 function nextPhoto() {
   currentPhoto = (currentPhoto + 1) % photos.length;
   photo.src = photos[currentPhoto];
@@ -23,33 +32,6 @@ function nextPhoto() {
 function prevPhoto() {
   currentPhoto = (currentPhoto - 1 + photos.length) % photos.length;
   photo.src = photos[currentPhoto];
-}
-
-function startSlideshow() {
-  // Check if the slideshow is already running
-  if (!slideshowTimer) {
-    // Start the slideshow timer
-    slideshowTimer = setInterval(nextPhoto, 10000); // 10 seconds interval
-  }
-}
-
-function stopSlideshow() {
-  // Check if the slideshow is running
-  if (slideshowTimer) {
-    // Stop the slideshow timer
-    clearInterval(slideshowTimer);
-    slideshowTimer = null; // Reset the timer variable
-  }
-}
-
-function toggleSlideshow() {
-  if (slideshowTimer) {
-    stopSlideshow();
-    pauseLink.textContent = "Resume Slideshow (10s)";
-  } else {
-    startSlideshow();
-    pauseLink.textContent = "Pause Slideshow (10s)";
-  }
 }
 
 slideshow.addEventListener("click", nextPhoto);
@@ -74,8 +56,3 @@ for (i = 0; i < toggler.length; i++) {
     this.classList.toggle("caret-down");
   });
 }
-
-// Start the slideshow
-startSlideshow();
-// Add event listener to the pause link
-pauseLink.addEventListener("click", toggleSlideshow);
