@@ -12,6 +12,16 @@ body, h1, p, ul {
   padding-left: 10px;
 }
 
+nav p {
+  font-family: Helvetica, sans-serif;
+  font-size:medium;
+  color: black;
+  text-decoration: none;
+  padding-right: 10px;
+  padding-left: 10px;
+  text-decoration:"underline";
+}
+
 ul {
   list-style-type: none;
   margin: 0;
