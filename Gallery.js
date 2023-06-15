@@ -6,7 +6,7 @@ let currentPageName = window.location.pathname.split("/").pop(); // Extract curr
 
 for (let i = 1; i <= 135; i++) {
   let num = i.toString().padStart(3, '0');
-  let filePath = `media/${currentPageName}/Photo${num}.jpeg`;
+  let filePath = `media/Gallery/${currentPageName}/Photo${num}.jpeg`;
   photos.push(filePath);
 }
 

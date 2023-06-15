@@ -18,7 +18,7 @@
 		  </th>
 	<td rowspan="2"> 
 		  <div id="slideshow">
-         <img src="Media/Home/Photo001.jpeg" alt="Top Works from the last few years" id="photo">
+         <img src="Media/Gallery/2019_DM/Photo001.jpeg" alt="Top Works from the last few years" id="photo">
       </div>
 	</td>
  </tr>
@@ -35,12 +35,13 @@
       <li><span class="caret">PROJECTS</span>
         <ul class="nested">
   
-            <li><span class="caret">ONGOING</span>
-                <ul class="nested">
-                  <li hidden><a href="#">#</a></li>
-                  <li hidden><a href="#">#</a></li>
-                  <li><a href="Gambia.html">Gambia 2019-</a></li>
-                </ul>
+  
+          <li><span class="caret">ONGOING</span>
+            <ul class="nested">
+              <li hidden><a href="#">#</a></li>
+              <li hidden><a href="#">#</a></li>
+              <li><a href="Gambia.html">Gambia 2019-</a></li>
+            </ul>
 
 
           <li><span class="caret">2023</span>
@@ -143,13 +144,13 @@
       </li>
     </ul>
     <ul>
-        <li><a href="License">License</a></li>
-      </ul>
+      <li><a href="License">License</a></li>
+    </ul>
   </nav>
 	</td>
 </table>
 
-<script src="Home.js"></script>
+<script src="/Gallery.js"></script>
 </body>
 
 
