@@ -126,3 +126,12 @@ font-style: normal;
       padding-right: 10px;
       padding-left: 10px;
 }
+h1 {
+  font-family: Helvetica, sans-serif;
+  font-style: normal;
+  font-size: 11pt;
+      color: black;
+        text-decoration: none;
+        padding-right: 10px;
+        padding-left: 10px;
+  }
