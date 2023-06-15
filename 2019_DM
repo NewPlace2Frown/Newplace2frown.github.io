@@ -79,7 +79,7 @@
               <li><a href="2019_Gambia.html">Kunta Kinteh Island, Gambia</a> </li>
               <li><a href="2019_Morecambe.html">Life In Morecambe</a></li>
               <li><a href="2019_DM.html">The Decisive Moment</a></li>
-              <li><a href="2019_Chun.html">Chunian Portraiture</a></li>
+              <li hidden><a href="2019_Chun.html">Chunian Portraiture</a></li>
             </ul>
   
           </li>
