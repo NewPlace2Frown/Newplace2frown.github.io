@@ -29,7 +29,6 @@ ul {
   flex-grow: 1;
   display: flex;
   justify-content: center;
-  align-items: center;
 }
 
 
@@ -93,7 +92,7 @@ a:hover {
 }
 
 .slideshow-container {
-  flex: 1 0 100%;
+  flex: 0 1 0 100%;
 }
 
 @media (min-width: 600px) {
