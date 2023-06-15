@@ -16,10 +16,9 @@ nav p {
   font-family: Helvetica, sans-serif;
   font-size:medium;
   color: black;
-  text-decoration: none;
+  text-decoration: underline;
   padding-right: 10px;
   padding-left: 10px;
-  text-decoration:"underline";
 }
 
 ul {
@@ -41,8 +40,6 @@ ul {
   display: flex;
   justify-content: center;
 }
-
-
 
 a {
   font-family: Georgia, 'Times New Roman', Times, serif;
