@@ -11,6 +11,12 @@ function initializeDropdowns() {
   });
 }
 
+document.addEventListener('click', function(e) {
+  if (e.target.id === 'pauseLink') {
+    toggleSlideshow();
+    e.target.textContent = slideshowTimer ? "Pause Slideshow (10s)" : "Resume Slideshow (10s)";
+  }
+});
 
 $("#navigation-placeholder").load("nav.html", initializeDropdowns);
 
@@ -66,7 +72,7 @@ function toggleSlideshow() {
   }
 }
 
-const pauseLink = document.getElementById("pauseLink");
+
 
 slideshow.addEventListener("click", nextPhoto);
 
