@@ -12,6 +12,14 @@ function initializeDropdowns() {
 }
 
 
+
+$(function(){
+  $("#navigation-placeholder").load("nav.html", function() {
+    initializeDropdowns();
+    initializePauseLink();
+  });
+});
+
 $("#navigation-placeholder").load("nav.html", function() {
   // When the navigation is loaded, set up the dropdowns and the slideshow pause link
   initializeDropdowns();
