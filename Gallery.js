@@ -3,7 +3,7 @@ const photo = document.getElementById("photo");
 
 const photos = [];
 
-const imageCounts = {
+ const imageCounts = {
   "index.html": 109,
   "2019_DM.html": 27,
   "2020_NHNT.html": 35
@@ -16,7 +16,31 @@ for (let i = 1; i <= imageCount; i++) {
   let num = i.toString().padStart(3, '0');
   let filePath = `media/Gallery/${currentPageName}/Photo${num}.jpeg`;
   photos.push(filePath);
+} 
+
+function initializeDropdowns() {
+  document.addEventListener('click', function(e) {
+    if (e.target.classList.contains('caret')) {
+      e.target.parentElement.querySelector(".nested").classList.toggle("active");
+      e.target.classList.toggle("caret-down");
+    }
+  });
 }
+
+document.addEventListener('click', function(e) {
+  if (e.target.id === 'pauseLink') {
+    toggleSlideshow();
+    e.target.textContent = slideshowTimer ? "Pause Slideshow (10s)" : "Resume Slideshow (10s)";
+  }
+});
+
+$("#navigation-placeholder").load("nav.html", initializeDropdowns);
+
+$(document).ready(function(){
+  $("#logo-placeholder").load("Logo.html");
+});
+
+
 
 
 let currentPhoto = 0;
@@ -61,7 +85,7 @@ function toggleSlideshow() {
   }
 }
 
-const pauseLink = document.getElementById("pauseLink");
+
 
 slideshow.addEventListener("click", nextPhoto);
 
@@ -88,5 +112,3 @@ for (i = 0; i < toggler.length; i++) {
 
 // Start the slideshow
 startSlideshow();
-// Add event listener to the pause link
-pauseLink.addEventListener("click", toggleSlideshow);
