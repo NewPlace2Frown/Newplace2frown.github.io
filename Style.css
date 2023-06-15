@@ -17,6 +17,14 @@
     cursor: pointer;
     font-size: 2em;
   }
+  /* Mobile styles */
+#slideshow {
+  width: 100%; /* Take up the full width */
+}
+
+#navigation {
+  width: 100%; /* Take up the full width */
+}
 }
 
 
@@ -29,7 +37,16 @@
   nav {
     display: block;
   }
-}
+   #slideshow {
+      width: 75%; /* Take up 75% of the width */
+      float: right; /* Position on the right */
+    }
+  
+    #navigation {
+      width: 25%; /* Take up 25% of the width */
+      float: left; /* Position on the left */
+    }
+  }
 
 body, h1, p, ul {
   font-family: Helvetica, sans-serif;
