@@ -1,140 +1,87 @@
 @font-face {
-  font-family: Helvetica; /* Choose a name for your font */
-  src: url('Helvetica.otf'); /* Path to your font file */
+  font-family: Helvetica;
+  src: url('Helvetica.otf');
 }
 
-
-
-nav ul li a:link {
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    color: blue;
-      text-decoration: none;
-      padding-right: 10px;
-      padding-left: 5px;
-  }
-   nav ul li a:visited {
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    color: lightcoral;
-      text-decoration: none;
-      padding-right: 10px;
-      padding-left: 5px;
-  }
-    nav ul li a:hover {
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    color: darkred;
-      text-decoration:line-through;
-      padding-right: 10px;
-      padding-left: 5px;
-  }
-nav ul a:link {
-font: Georgia;
-    color: black;
-      text-decoration: none;
-      padding-right: 10px;
-      padding-left: 5px;
-}
-nav ul a:visited {
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    color: lightcoral;
-      text-decoration: none;
-      padding-right: 10px;
-      padding-left: 5px;
-  }
-    nav ul a:hover {
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    color: darkred;
-      text-decoration:wavy;
-      padding-right: 10px;
-      padding-left: 5px;
-  }
-  nav ul {
-font-family: Georgia, 'Times New Roman', Times, serif, sans-serif;
-    color: black;
-      text-decoration: none;
-      padding-right: 10px;
-      padding-left: 5px;
-      line-height: 1.6;
+body, h1, p, ul {
+  font-family: Helvetica, sans-serif;
+  color: black;
+  text-decoration: none;
+  padding-right: 10px;
+  padding-left: 10px;
 }
 
 ul {
-list-style-type: none;
-margin: 0;
-padding-top: 0;
+  list-style-type: none;
+  margin: 0;
+  padding-top: 0;
+  line-height: 1.6;
 }
-#slideshow img {
-  height: auto;
-  width: auto;
-  max-height: 900px;
-  align-items: center;
+
+a {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: blue;
+  text-decoration: none;
+  padding-right: 10px;
+  padding-left: 5px;
 }
+
+a:visited {
+  color: lightcoral;
+}
+
+a:hover {
+  color: darkred;
+  text-decoration: line-through;
+}
+
 .caret {
-cursor: pointer;
--webkit-user-select: none; /* Safari 3.1+ */
--moz-user-select: none; /* Firefox 2+ */
--ms-user-select: none; /* IE 10+ */
-user-select: none;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .caret::before {
-content: ">";
-color: black;
-display: inline-block;
-margin-right: 6px;
+  content: ">";
+  color: black;
+  display: inline-block;
+  margin-right: 6px;
 }
 
 .caret-down::before {
--ms-transform: rotate(90deg); /* IE 9 */
--webkit-transform: rotate(90deg); /* Safari */
-transform: rotate(90deg);  
+  -ms-transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
 }
-#dropdown {
-margin: 0;
-padding: 0;
-line-height: 1.6;
-}
-#dropdown a:link {
-    font: Georgia;
-    color: red;
-      text-decoration: none;
-      padding-right: 10px;
-      padding-left: 10px;
-  }
-  #dropdown a:visited {
-    font: Georgia;
-    color: lightcoral;
-      text-decoration: none;
-      padding-right: 10px;
-      padding-left: 10px;
-  }
-  #dropdown a:hover {
-    font: Georgia;
-    color: darkred;
-      text-decoration: underline;
-      padding-right: 10px;
-      padding-left: 10px;
-  }
+
 .nested {
-display: none;
+  display: none;
 }
+
 .active {
-    font: Georgia;
-    color: #111;
-    display: block;
+  display: block;
 }
-p {
-font-family: Helvetica, sans-serif;
-font-style: normal;
-    color: black;
-      text-decoration: underline;
-      padding-right: 10px;
-      padding-left: 10px;
+
+/* Add responsive classes */
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
 }
-h1 {
-  font-family: Helvetica, sans-serif;
-  font-style: normal;
-  font-size: 11pt;
-      color: black;
-        text-decoration: none;
-        padding-right: 10px;
-        padding-left: 10px;
+
+.logo-container {
+  flex: 1 0 100%;
+  max-width: 350px;
+}
+
+.slideshow-container {
+  flex: 1 0 100%;
+}
+
+@media (min-width: 600px) {
+  .logo-container, .slideshow-container {
+    flex: 1;
   }
+}

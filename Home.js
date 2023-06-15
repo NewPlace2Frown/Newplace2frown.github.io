@@ -19,7 +19,7 @@ document.addEventListener('click', function(e) {
 });
 
 $("#navigation-placeholder").load("nav.html", initializeDropdowns);
-
+$("#logo-placeholder").load("logo.html");
 
 
 
