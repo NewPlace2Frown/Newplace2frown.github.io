@@ -18,7 +18,12 @@ document.addEventListener('click', function(e) {
   }
 });
 
-$("#navigation-placeholder").load("nav.html", initializeDropdowns);
+$(function(){
+  $("#navigation-placeholder").load("nav.html", function() {
+    initializeDropdowns();
+    initializePauseLink();
+  });
+});
 
 $(document).ready(function() {
   $('#hamburger').click(function() {
