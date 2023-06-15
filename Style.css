@@ -3,28 +3,6 @@
   src: url('Helvetica.otf');
 }
 
-/* Mobile first: initially hide the navigation */
-nav {
-  display: none;
-}
-
-/* Show the hamburger icon on small screens */
-#hamburger {
-  display: block;
-  cursor: pointer;
-  font-size: 2em;
-}
-
-/* On larger screens, hide the hamburger and show the navigation */
-@media (min-width: 600px) {
-  #hamburger {
-    display: none;
-  }
-  nav {
-    display: block;
-  }
-}
-
 body, h1, p, ul {
   font-family: Helvetica, sans-serif;
   font-size:medium;

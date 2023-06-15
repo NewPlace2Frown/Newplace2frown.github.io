@@ -20,13 +20,6 @@ document.addEventListener('click', function(e) {
 
 $("#navigation-placeholder").load("nav.html", initializeDropdowns);
 
-$(document).ready(function() {
-  $('#hamburger').click(function() {
-    $('nav').toggle();
-  });
-});
-
-
 $(document).ready(function(){
   $("#logo-placeholder").load("Logo.html");
 });
