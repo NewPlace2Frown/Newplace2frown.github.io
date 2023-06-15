@@ -18,6 +18,15 @@ ul {
   line-height: 1.6;
 }
 
+#slideshow img {
+  height: auto;
+  max-height: 90vh; /* vh stands for Viewport Height. 90vh means 90% of the viewport's height */
+  width: auto;
+  max-width: 100%;
+  align-items: center;
+}
+
+
 a {
   font-family: Georgia, 'Times New Roman', Times, serif;
   color: blue;

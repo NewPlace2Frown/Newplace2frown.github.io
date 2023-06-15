@@ -20,9 +20,10 @@ document.addEventListener('click', function(e) {
 
 $("#navigation-placeholder").load("nav.html", initializeDropdowns);
 
-$(function(){
+$(document).ready(function(){
   $("#logo-placeholder").load("logo.html");
 });
+
 
 const photos = [];
 for (let i = 1; i <= 109; i++) {
@@ -100,5 +101,3 @@ for (i = 0; i < toggler.length; i++) {
 
 // Start the slideshow
 startSlideshow();
-// Add event listener to the pause link
-pauseLink.addEventListener("click", toggleSlideshow);
