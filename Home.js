@@ -21,7 +21,7 @@ document.addEventListener('click', function(e) {
 $("#navigation-placeholder").load("nav.html", initializeDropdowns);
 
 $(document).ready(function(){
-  $("#logo-placeholder").load("logo.html");
+  $("#logo-placeholder").load("Logo.html");
 });
 
 
