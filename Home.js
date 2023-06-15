@@ -3,16 +3,14 @@ const photo = document.getElementById("photo");
 
 
 function initializeDropdowns() {
-  var toggler = document.getElementsByClassName("caret");
-  var i;
-  
-  for (i = 0; i < toggler.length; i++) {
-    toggler[i].addEventListener("click", function() {
-      this.parentElement.querySelector(".nested").classList.toggle("active");
-      this.classList.toggle("caret-down");
-    });
-  }
+  document.addEventListener('click', function(e) {
+    if (e.target.classList.contains('caret')) {
+      e.target.parentElement.querySelector(".nested").classList.toggle("active");
+      e.target.classList.toggle("caret-down");
+    }
+  });
 }
+
 
 $("#navigation-placeholder").load("nav.html", initializeDropdowns);
 
