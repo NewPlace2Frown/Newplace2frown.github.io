@@ -12,18 +12,23 @@ function initializeDropdowns() {
 }
 
 
+
+// Define a function to initialize the pause link
+function initializePauseLink() {
+  const pauseLink = document.getElementById('pauseLink');
+  if (pauseLink) {
+    pauseLink.addEventListener('click', function() {
+      toggleSlideshow();
+      this.textContent = slideshowTimer ? "Pause Slideshow (10s)" : "Resume Slideshow (10s)";
+    });
+  }
+}
+
 $("#navigation-placeholder").load("nav.html", function() {
   // When the navigation is loaded, set up the dropdowns and the slideshow pause link
   initializeDropdowns();
-
-  document.addEventListener('click', function(e) {
-    if (e.target.id === 'pauseLink') {
-      toggleSlideshow();
-      e.target.textContent = slideshowTimer ? "Pause Slideshow (10s)" : "Resume Slideshow (10s)";
-    }
-  });
+  initializePauseLink();
 });
-
 
 $(document).ready(function() {
   $('#hamburger').click(function() {
