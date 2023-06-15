@@ -20,6 +20,13 @@ document.addEventListener('click', function(e) {
 
 $("#navigation-placeholder").load("nav.html", initializeDropdowns);
 
+<<<<<<< Updated upstream
+=======
+$(function(){
+  $("#logo-placeholder").load("logo.html");
+});
+
+>>>>>>> Stashed changes
 
 
 
