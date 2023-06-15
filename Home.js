@@ -2,9 +2,19 @@ const slideshow = document.getElementById("slideshow");
 const photo = document.getElementById("photo");
 
 
-$(document).ready(function() {
-  $("#navigation-placeholder").load("nav.html");
-});
+function initializeDropdowns() {
+  var toggler = document.getElementsByClassName("caret");
+  var i;
+  
+  for (i = 0; i < toggler.length; i++) {
+    toggler[i].addEventListener("click", function() {
+      this.parentElement.querySelector(".nested").classList.toggle("active");
+      this.classList.toggle("caret-down");
+    });
+  }
+}
+
+$("#navigation-placeholder").load("nav.html", initializeDropdowns);
 
 
 
