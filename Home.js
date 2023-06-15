@@ -32,11 +32,9 @@ $("#navigation-placeholder").load("nav.html", function() {
 
 $(document).ready(function() {
   $('#hamburger').click(function() {
-    console.log('Burger button clicked!');
     $('nav').toggle();
   });
 });
-
 
 
 $(document).ready(function(){
