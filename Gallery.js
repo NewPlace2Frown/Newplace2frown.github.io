@@ -2,9 +2,17 @@ const slideshow = document.getElementById("slideshow");
 const photo = document.getElementById("photo");
 
 const photos = [];
-let currentPageName = window.location.pathname.split("/").pop(); // Extract current page name from URL
 
-for (let i = 1; i <= 135; i++) {
+const imageCounts = {
+  "index.html": 109,
+  "2019_DM.html": 27,
+  "2020_NHNT.html": 35
+}
+
+let currentPageName = window.location.pathname.split("/").pop(); // Extract current page name from URL
+let imageCount = imageCounts[currentPageName]; // get the image count for the current page
+
+for (let i = 1; i <= imageCount; i++) {
   let num = i.toString().padStart(3, '0');
   let filePath = `media/Gallery/${currentPageName}/Photo${num}.jpeg`;
   photos.push(filePath);
@@ -13,6 +21,8 @@ for (let i = 1; i <= 135; i++) {
 
 let currentPhoto = 0;
 photo.src = photos[currentPhoto];
+
+let slideshowTimer = null;
 
 function nextPhoto() {
   currentPhoto = (currentPhoto + 1) % photos.length;
@@ -25,14 +35,33 @@ function prevPhoto() {
 }
 
 function startSlideshow() {
+  // Check if the slideshow is already running
+  if (!slideshowTimer) {
     // Start the slideshow timer
     slideshowTimer = setInterval(nextPhoto, 10000); // 10 seconds interval
   }
-  
-  function stopSlideshow() {
+}
+
+function stopSlideshow() {
+  // Check if the slideshow is running
+  if (slideshowTimer) {
     // Stop the slideshow timer
     clearInterval(slideshowTimer);
+    slideshowTimer = null; // Reset the timer variable
   }
+}
+
+function toggleSlideshow() {
+  if (slideshowTimer) {
+    stopSlideshow();
+    pauseLink.textContent = "Resume Slideshow (10s)";
+  } else {
+    startSlideshow();
+    pauseLink.textContent = "Pause Slideshow (10s)";
+  }
+}
+
+const pauseLink = document.getElementById("pauseLink");
 
 slideshow.addEventListener("click", nextPhoto);
 
@@ -59,3 +88,5 @@ for (i = 0; i < toggler.length; i++) {
 
 // Start the slideshow
 startSlideshow();
+// Add event listener to the pause link
+pauseLink.addEventListener("click", toggleSlideshow);

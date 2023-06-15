@@ -62,7 +62,10 @@ margin: 0;
 padding-top: 0;
 }
 #slideshow img {
-  height: 900px;
+  height: auto;
+  width: auto;
+  max-height: 900px;
+  align-items: center;
 }
 .caret {
 cursor: pointer;

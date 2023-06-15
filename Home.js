@@ -2,9 +2,15 @@ const slideshow = document.getElementById("slideshow");
 const photo = document.getElementById("photo");
 
 
+$(document).ready(function() {
+  $("#navigation-placeholder").load("nav.html");
+});
+
+
+
 
 const photos = [];
-for (let i = 1; i <= 135; i++) {
+for (let i = 1; i <= 109; i++) {
   let num = i.toString().padStart(3, '0');
   let filePath = `Media/Home/Photo${num}.jpeg`;
   photos.push(filePath);
