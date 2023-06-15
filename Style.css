@@ -20,11 +20,18 @@ ul {
 
 #slideshow img {
   height: auto;
-  max-height: 90vh; /* vh stands for Viewport Height. 90vh means 90% of the viewport's height */
+  max-height: 90vh;
   width: auto;
   max-width: 100%;
+}
+
+#slideshow {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
   align-items: center;
 }
+
 
 
 a {
@@ -94,3 +101,18 @@ a:hover {
     flex: 1;
   }
 }
+
+.page {
+  display: flex;
+}
+
+.sidebar {
+  width: 250px;
+  margin-right: 10px;
+}
+
+.logo-section {
+  margin-bottom: 10px;
+}
+
+
