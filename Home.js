@@ -1,6 +1,5 @@
 const slideshow = document.getElementById("slideshow");
 const photo = document.getElementById("photo");
-const pauseLink = document.getElementById('pauseButton');  // ensure correct ID
 
 
 
@@ -53,6 +52,7 @@ function toggleSlideshow() {
   }
 }
 
+const pauseLink = document.getElementById("pauseLink");
 
 slideshow.addEventListener("click", nextPhoto);
 
