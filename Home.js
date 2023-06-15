@@ -1,5 +1,7 @@
 const slideshow = document.getElementById("slideshow");
 const photo = document.getElementById("photo");
+const pauseLink = document.getElementById("pauseLink");
+
 
 const photos = [];
 for (let i = 1; i <= 135; i++) {
@@ -10,6 +12,8 @@ for (let i = 1; i <= 135; i++) {
 
 let currentPhoto = 0;
 photo.src = photos[currentPhoto];
+
+let slideshowTimer = null;
 
 function nextPhoto() {
   currentPhoto = (currentPhoto + 1) % photos.length;
@@ -22,13 +26,30 @@ function prevPhoto() {
 }
 
 function startSlideshow() {
-  // Start the slideshow timer
-  slideshowTimer = setInterval(nextPhoto, 10000); // 10 seconds interval
+  // Check if the slideshow is already running
+  if (!slideshowTimer) {
+    // Start the slideshow timer
+    slideshowTimer = setInterval(nextPhoto, 10000); // 10 seconds interval
+  }
 }
 
 function stopSlideshow() {
-  // Stop the slideshow timer
-  clearInterval(slideshowTimer);
+  // Check if the slideshow is running
+  if (slideshowTimer) {
+    // Stop the slideshow timer
+    clearInterval(slideshowTimer);
+    slideshowTimer = null; // Reset the timer variable
+  }
+}
+
+function toggleSlideshow() {
+  if (slideshowTimer) {
+    stopSlideshow();
+    pauseLink.textContent = "Resume Slideshow";
+  } else {
+    startSlideshow();
+    pauseLink.textContent = "Pause Slideshow";
+  }
 }
 
 slideshow.addEventListener("click", nextPhoto);
@@ -56,3 +77,5 @@ for (i = 0; i < toggler.length; i++) {
 
 // Start the slideshow
 startSlideshow();
+// Add event listener to the pause link
+pauseLink.addEventListener("click", toggleSlideshow);
