@@ -20,15 +20,9 @@ document.addEventListener('click', function(e) {
 
 $("#navigation-placeholder").load("nav.html", initializeDropdowns);
 
-<<<<<<< Updated upstream
-=======
 $(function(){
   $("#logo-placeholder").load("logo.html");
 });
-
->>>>>>> Stashed changes
-
-
 
 const photos = [];
 for (let i = 1; i <= 109; i++) {
