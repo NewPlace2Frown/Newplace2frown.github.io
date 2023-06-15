@@ -11,7 +11,12 @@ function initializeDropdowns() {
   });
 }
 
-
+document.addEventListener('click', function(e) {
+  if (e.target.id === 'pauseLink') {
+    toggleSlideshow();
+    e.target.textContent = slideshowTimer ? "Pause Slideshow (10s)" : "Resume Slideshow (10s)";
+  }
+});
 
 $(function(){
   $("#navigation-placeholder").load("nav.html", function() {
@@ -19,19 +24,6 @@ $(function(){
     initializePauseLink();
   });
 });
-
-$("#navigation-placeholder").load("nav.html", function() {
-  // When the navigation is loaded, set up the dropdowns and the slideshow pause link
-  initializeDropdowns();
-
-  document.addEventListener('click', function(e) {
-    if (e.target.id === 'pauseLink') {
-      toggleSlideshow();
-      e.target.textContent = slideshowTimer ? "Pause Slideshow (10s)" : "Resume Slideshow (10s)";
-    }
-  });
-});
-
 
 $(document).ready(function() {
   $('#hamburger').click(function() {
