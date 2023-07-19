@@ -4,12 +4,12 @@ const photo = document.getElementById("photo");
 
 
  const imageCounts = {
-  "index.html": 109,
-  "2019_DM.html": 27,
-  "2020_NHNT.html": 35,
-  "2019_Morecambe.html": 13,
-  "2020_Lancaster.html": 64,
-  "2022_Manchester.html": 8
+  "index": 109,
+  "2019_DM": 27,
+  "2020_NHNT": 35,
+  "2019_Morecambe": 13,
+  "2020_Lancaster": 64,
+  "2022_Manchester": 8
 }
 
 let currentPageName = window.location.pathname.split("/").pop(); // Extract current page name from URL
