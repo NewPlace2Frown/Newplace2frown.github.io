@@ -9,7 +9,7 @@ const photo = document.getElementById("photo");
   "2020_NHNT.html": 35,
   "2019_Morecambe.html": 13,
   "2020_Lancaster.html": 64,
-  "2020_Manchester.html": 8
+  "2022_Manchester.html": 8
 }
 
 let currentPageName = window.location.pathname.split("/").pop(); // Extract current page name from URL
