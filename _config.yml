@@ -1,0 +1,15 @@
+theme: jekyll-theme-minimal
+title: NewPlace2Frown's homepage
+description: Bookmark this to keep an eye on my project updates!
+permalink: pretty
+collections:
+  notes:
+    output: true
+    permalink: /notes/:title
+
+defaults:
+  - scope:
+      path: ""
+      type: notes
+    values:
+      layout: note
