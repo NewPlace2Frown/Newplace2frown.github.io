@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ page.title }} | Your Notes</title>
-    <link rel="stylesheet" href="/assets/css/styles.css">
+    <title>{% if page.title %}{{ page.title }}{% else %}Your Notes{% endif %}</title>
+    <link rel="stylesheet" href="{{ '/assets/css/styles.css' | relative_url }}">
 </head>
 <body>
     <header>
-        <h1><a href="/">Your Working Notes</a></h1>
+        <h1><a href="{{ '/' | relative_url }}">Your Working Notes</a></h1>
     </header>
-    <div class="note-columns">
+    <div id="note-columns" class="note-columns">
         {{ content }}
     </div>
-    <script src="/assets/js/notes.js"></script>
+    <script src="{{ '/assets/js/notes.js' | relative_url }}"></script>
 </body>
 </html>

@@ -2,12 +2,19 @@ body, html {
     height: 100%;
     margin: 0;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    overflow: hidden;
+}
+
+header {
+    padding: 10px;
+    background: #f0f0f0;
 }
 
 .note-columns {
     display: flex;
     overflow-x: auto;
-    height: calc(100vh - 60px);
+    height: calc(100vh - 50px);
+    scroll-behavior: smooth;
 }
 
 .note-container {
@@ -22,4 +29,13 @@ body, html {
 
 .note-content {
     padding: 20px;
+}
+
+.note-content a {
+    color: #0000EE;
+    text-decoration: none;
+}
+
+.note-content a:hover {
+    text-decoration: underline;
 }
