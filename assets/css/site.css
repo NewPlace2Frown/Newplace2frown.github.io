@@ -62,8 +62,9 @@ html,body{height:100%;margin:0;font-family:Inter, 'Segoe UI', Roboto, Arial, san
 }
 
 /* Small visual tweaks */
-header h1{color:var(--text);margin-top:0}
-header h2{color:var(--text);margin-top:0; text-align: right;}
+header h1{color:var(--text);margin-top:0;margin-left: 10%;}
+header h2{color:var(--text);margin-top:0; text-align: right; margin-left: 10%;}
+p {margin-left: 10%;}
 
 /* Gallery */
 #portfolio-gallery{max-width:95%;max-height: 95%;margin:18px auto}
