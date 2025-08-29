@@ -1,40 +1,34 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
 <head>
-
-  <title>HOME - NewPlace2Frown</title>
-  <link rel="shortcut icon" type="image/gif" href="favicon.gif">
-  <link rel="icon" type="image/gif" href="favicon.gif">  
-  <link rel="stylesheet" href="Style.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Site with Sidebar Navigation</title>
+  <link rel="stylesheet" href="assets/css/site.css">
 </head>
 <body>
-<div class="page">
-    <div class="sidebar">
-        <div class="logo-section">
+  <button id="sidebarToggle" class="mobile-toggle" aria-label="Open navigation" aria-expanded="false">☰</button>
 
-            <a href="index.html"> <img src="Media/WebLogo2.gif" alt="LE.ON_PHOTOS logo" width="250px" id="Logo"> </a>
+  <aside id="sidebar" class="sidebar" aria-label="Site navigation">
+    <!-- nav.html will be loaded here by assets/js/site.js -->
+  </aside>
 
-            <h2>
-                <br> Made by Leon Patrick Morgan <br> <br> 
-                - To move through the gallery <br>
-                use the arrow keys or click. <br>
-                
-            </h2>
-        </div>
+  <div id="overlay" class="overlay" tabindex="-1"></div>
 
-        <div id="navigation-placeholder"> </div>
-    </div>
+  <main id="content" class="content">
+    <header>
+      <h1>Hello!</h1>
+    </header>
+    <section>
+      <p>Welcome to my site, feel free to explore! <br> <b><i>—Leon</i></b></p>
+    </section>
+    
+    <section id="portfolio-gallery">
+      <div id="gallery" data-interval="3500"></div>
+    </section>
+  </main>
 
-    <div class="slideshow-container">
-        <div id="slideshow">
-            <img src="Media/Home/Photo001.jpeg" alt="Top Works from the last few years" id="photo">
-        </div>
-    </div>
-</div>
-
-<script src="Home.js"></script>
-
+  <script src="assets/js/site.js" defer></script>
+  <script src="assets/js/gallery.js" defer></script>
 </body>
 </html>

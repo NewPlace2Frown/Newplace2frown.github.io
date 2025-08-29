@@ -1,109 +1,48 @@
-<nav>
+<!-- Navigation fragment (modular). Use <details> folders for easy additions. -->
+<nav class="site-nav">
+  <div class="nav-top">
+    <a class="logo" href="/">
+      <img src="/WebLogo1.gif" alt="Site logo" />
+    </a>
+  </div>
 
-    <p><br> CONTENTS <br></p>
-    <ul>
-      <li><a href="https://www.newplace2frown.com">Home</a></li>
-      <li><a href="https://newplace2frown.myshopify.com">PRINT SALE! (<i>15% off</i>)</a></li>
-      <li><a href="https://docs.google.com/document/d/11QvEfM6O2GNp7RlLfQz_ajvZM6Lw-ht_jjcX2RwSo-U/edit?usp=sharing">About Me</a></li>
-      <li><a href="Booking">Book a shoot!</a></li>
-      <li> <a href="#" id="pauseLink">Pause Slideshow (10s)</a> </li>
-    </ul>
+  <div class="nav-list">
+  <a href="/">Home</a>
 
-     <ul id="dropdown">
-      <li><span class="caret">PROJECTS</span>
-        <ul class="nested">
-
-          <li hidden><span class="caret">2023</span>
-            <ul class="nested">
-              <li hidden><a href="#">#</a></li>
-              <li hidden><a href="#">#</a></li>
-              <li><a href="2023_Lancaster">Lancaster 2023</a></li>
-            </ul>
-  
-          <li><span class="caret">2022</span>
-            <ul class="nested">
-              <li hidden><a href="2022_Abbey">Abbey Tap House 1. 2 & 3</a></li>
-              <li hidden><a href="2022_Lancaster">Lancaster: Objects, Textures, Tags</a></li>
-              <li><a href="2022_Manchester">Unreleased: Adidas Moss-Side</a></li>
-              <li hidden><a href="2022_Inexcplicable">Zine: INEXPLICABLE</a></li>
-            </ul>
-  
-          <li hidden><span class="caret">2021</span>
-            <ul class="nested">
-              <li><a href="2021_Mallorca">Mallorca 2021</a></li>
-              <li><a href="2021_Morecambe">Morecambe Bay</a></li>
-              <li><a href="2021_Lancaster">Streets of Lancaster</a></li>
-              <li><a href="2021_Manchester">Manchester</a></li>
-              <li><a href="2021_Glasgow">Glasgow</a></li>
-            </ul>
-  
-          <li><span class="caret">2020</span>
-            <ul class="nested">
-              <li><a href="2020_Lancaster">All Roads Lead to Lancaster</a></li>
-              <li><a href="2020_NHNT">Neither Here Nor There</a></li>
-              <li hidden><a href="2020_Designs">Designs for another time</a></li>
-            </ul>
-  
-          <li><span class="caret">2019</span>
-            <ul class="nested">
-              <li hidden><a href="2019_Gambia">Kunta Kinteh Island, Gambia</a> </li>
-              <li><a href="2019_Morecambe">Life In Morecambe</a></li>
-              <li><a href="2019_DM">The Decisive Moment</a></li>
-              <li hidden><a href="2019_Chun">Chunian Portraiture</a></li>
-            </ul>
-  
-            <li hidden><span class="caret">ONGOING</span>
-                <ul class="nested">
-                  <li hidden><a href="#">#</a></li>
-                  <li hidden><a href="#">#</a></li>
-                  <li><a href="Gambia">Gambia 2019-</a></li>
-                </ul>
-
-          </li>
-        </ul>
-    </ul>
-        <ul id="dropdown">
-          <li><span class="caret">SELECTED COMMISSIONS</span>
-            <ul class="nested">
-  
-                <li><a href="SL">Saintleamon</a></li>
-                <li><a href="MonHi">Monument Hifi</a></li>
-                <li><a href="NSDB">Non-Stop Dutty Bass</a></li>
-                <li><a href="Calliebirb">Calliebirb 02.04.21</a></li>
-                <li><a href="Isaac">Isaac 09.04.21</a></li>
-                <li><a href="Wedding_Samples">Wedding Samples (2021-)</a></li>
-
-            </ul>
-          </li>
-</ul>
-<ul>
-              <li><span class="caret">MUSIC VIDEOS</span>
-                <ul class="nested">
-                  <li><a href="Ghost">LA1 COLLECTIVE - Ghost</a></li>
-                  <li><a href="https://youtu.be/SHtKtRB2nag">T.LEE - Gassed Like Dah</a></li>
-                  <li><a href="https://youtu.be/ehMHD5lm7eI">T.LEE - The Question</a></li>
-                </ul>
-  
-
-            </ul>
-        </li>
-        </ul>
-    </ul>
-    <ul id="dropdown">
-      <li><span class="caret">CONTACT ME</span>
-        <ul class="nested">
-          <li><a href="http://www.instagram.com/le.on_photos">Instagram</a></li>
-          <li><a href="mailto:newplace2frown@gmail.com?subject=Contact%20email">e-Mail</a></li>
-          <li><a href="https://youtube.com/@newplace2frown">YouTube </a></li>
-          <li><a href="https://linktr.ee/newplace2frown">Linktree</a></li>
-          <li><a href="https://twitter.com/NewPlace2Frown">Twitter</a></li>
-          <li><a href="https://www.patreon.com/NewPlace2Frown">Patreon</a></li>
-        </ul>
-      </li>
-      </li>
-    </ul>
-    <ul>
-        <li><a href="License.txt">License</a></li>
-       
+  <details id="f-photography" class="nav-folder">
+      <summary>Photography</summary>
+      <ul>
+  <li><a href="/photos/portfolio.html">Portfolio</a></li>
+  <li><a href="/photos/prints.html">Prints</a></li>
       </ul>
-  </nav>
+    </details>
+
+    <details id="f-blog" class="nav-folder">
+      <summary>Blog</summary>
+      <ul>
+  <li><a href="/blog/index.html">All posts</a></li>
+  <li><a href="/blog/drafts.html">Drafts</a></li>
+      </ul>
+    </details>
+
+    <details id="f-about" class="nav-folder">
+      <summary>About</summary>
+      <ul>
+  <li><a href="/about.html">About</a></li>
+  <li><a href="/contact.html">Contact</a></li>
+      </ul>
+    </details>
+
+    <details id="f-projects" class="nav-folder">
+      <summary>Projects</summary>
+      <ul>
+  <li><a href="/projects/project1.html">Lancaster</a></li>
+  <li><a href="/projects/project2.html">Morecambe</a></li>
+      </ul>
+    </details>
+
+    <div class="nav-folder">
+  <a href="/unlinked/index.html">Unlinked</a>
+    </div>
+  </div>
+</nav>

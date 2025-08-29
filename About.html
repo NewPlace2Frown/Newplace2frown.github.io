@@ -1,149 +1,98 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
 <head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>About — Photoblog</title>
+  <link rel="stylesheet" href="assets/css/site.css">
+<style>
+/* Grid layout for text and image side by side */
+.content-wrapper {
+  display: grid;
+  grid-template-columns: 400px 1fr; /* Text gets mobile-like width, image takes remaining space */
+  gap: 3rem; /* Space between text and image */
+  align-items: start;
+  max-width: 1200px; /* Optional: limit overall container width */
+  margin: 0 auto; /* Optional: center the container */
+}
 
-  <title>About Me - NewPlace2Frown</title>
-  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-  <link rel="icon" href="favicon.ico" type="image/x-icon">  
-  <link rel="stylesheet" href="about.css">
+/* Text styling */
+main.content section p {
+  text-align: justify;
+  hyphens: auto;
+  max-width: 100%; /* Ensure paragraphs don't exceed their container */
+}
+
+/* Image container styling */
+figure.image-container {
+  display: block;
+  border: 1px solid var(--stroke);
+  background: var(--bg);
+  min-width: 300px; /* Minimum width for the image */
+}
+
+figure.image-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Responsive: stack vertically on smaller screens */
+@media (max-width: 768px) {
+  .content-wrapper {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
+</style>
+
 
 </head>
 <body>
-<table>
-  
-	<tr>
-	  <th align="left" width="350px">
-		  <a href="Index.html"> <img src="Media/WebLogo2.gif" alt="LE.ON_PHOTOS logo" width="250px" id="Logo"></a>	
-          <br> Made by Leon Patrick Morgan.
+  <button id="sidebarToggle" class="mobile-toggle" aria-label="Open navigation" aria-expanded="false">☰</button>
+  <aside id="sidebar" class="sidebar" aria-label="Site navigation"></aside>
+  <div id="overlay" class="overlay" tabindex="-1"></div>
+  <main id="content" class="content">
+    <header>
+      <h1>About</h1>
+    </header>
+<div class="content-wrapper">
+
+    <section>
+
+      <h2>Hi there, my name's Leon. I take photos.</h2>
+
+      <blockquote>
+        <p><em>"I'm interested in grandmasters, quasars, and Malkovich."</em></p>
+      </blockquote>
 
 
-		  </th>
-	<td rowspan="1"> 
-        <div class="about-image-container">
-           <a href="https://instagram.com/le.on_photos">  <img id="aboutImage" src="" alt="About Image" /></a>
-          </div>
-          <td width="700px"> 
-            <div class="about-image-container2">
-            <img src="Media/About/AboutMe.jpg"> 
-          </td>  
-        </div>
-	</td>
- </tr>
-	<td>
+      <h2>A New Place To Frown</h2>
+      
+      <p>Interested in Grandmasters, Quasars and Malkovich; in police kicking kids, the suffering of light, and the decisive moment.</p>
 
-<nav valign="top">
+      <p>With years of experience photographing for both personal and professional purposes, I have developed an intense love for this indescribable visual art form, and an insatiable drive to document the world around me.</p>
 
-    <p><br> CONTENTS <br></p>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="https://newplace2frown.myshopify.com">Shop</a></li>
-      <li><a href="About.html">About Me</a></li>
-      <li hidden> <a href="#" id="pauseLink">Pause Slideshow (10s)</a></li>
-    </ul>
+      <p>Hailing from Lancaster, a town in the north west of England, I have documented people, places and things across the planet, from Poland to Gambia and back again; Wandering the streets of Geneva, or immersing myself in the legendary Manchester underbelly.</p>
 
-     <ul id="dropdown">
-      <li><span class="caret">PROJECTS</span>
-        <ul class="nested">
-  
+      <p>With an instinctive process, my work explores a wide range of subjects, primarily from the streets, whilst simultaneously exploring various other realms - from the digital to the astronomical.</p>
 
+      <p>From the age of 15, ever since my art teacher introduced me to Bresson's "decisive moment" at the same time as Robert Shore's "post-photography", I've been obsessively trying to capture the world in the 3:2 frame of my camera. Striding the line between traditional photojournalism, and contemporary fine art/documentary photography.</p>
 
+      <p>This inherent contradiction of art, truth and beauty is core to my work, and is something I struggle with every time I shoot - I aspire to engage audiences in questioning the "truth" portrayed in my images, striving to provoke thoughtful reflection and introspection.</p>
 
-          <li><span class="caret">2023</span>
-            <ul class="nested">
-              <li hidden><a href="#">#</a></li>
-              <li hidden><a href="#">#</a></li>
-              <li><a href="2023_Lancaster.html">Lancaster 2023</a></li>
-            </ul>
-  
-          <li><span class="caret">2022</span>
-            <ul class="nested">
-              <li><a href="2022_Abbey.html">Abbey Tap House 1. 2 & 3</a></li>
-              <li><a href="2022_Lancaster.html">Lancaster: Objects, Textures, Tags</a></li>
-              <li><a href="2022_Manchester.html">Unreleased: Adidas Moss-Side</a></li>
-            </ul>
-  
-          <li><span class="caret">2021</span>
-            <ul class="nested">
-              <li><a href="2021_Mallorca.html">Mallorca 2021</a></li>
-              <li><a href="2021_Morecambe.html">Morecambe Bay</a></li>
-              <li><a href="2021_Lancaster.html">Streets of Lancaster</a></li>
-              <li hidden><a href="2021_Manchester.html">Manchester</a></li>
-              <li hidden><a href="2021_Glasgow.html">Glasgow</a></li>
-            </ul>
-  
-          <li><span class="caret">2020</span>
-            <ul class="nested">
-              <li><a href="2020_Lancaster.html">All Roads Lead to Lancaster</a></li>
-              <li><a href="2020_NHNT.html">Neither Here Nor There</a></li>
-              <li><a href="2020_Designs.html">Designs for another time</a></li>
-            </ul>
-  
-          <li><span class="caret">2019</span>
-            <ul class="nested">
-              <li><a href="2019_Gambia.html">Kunta Kinteh Island, Gambia</a> </li>
-              <li><a href="2019_Morecambe.html">Life In Morecambe</a></li>
-              <li><a href="2019_DM.html">The Decisive Moment</a></li>
-              <li><a href="2019_Chun.html">Chunian Portraiture</a></li>
-            </ul>
-  
-            <li><span class="caret">ONGOING</span>
-                <ul class="nested">
-                  <li hidden><a href="#">#</a></li>
-                  <li hidden><a href="#">#</a></li>
-                  <li><a href="Gambia.html">Gambia 2019-</a></li>
-                </ul>
+      <p>I hope to share this perspective with the world, and I hope you enjoy my work! Feel free to get in touch if you'd like to chat, or commission my services.</p>
 
-          </li>
-        </ul>
-  
-        <ul id="dropdown">
-          <li><span class="caret">SELECTED COMMISSIONS</span>
-            <ul class="nested">
-  
-                <li><a href="SL.html">Saintleamon</a></li>
-                <li><a href="MonHi.html">Monument Hifi</a></li>
-                <li><a href="NSDB.html">Non-Stop Dutty Bass</a></li>
-                <li><a href="Calliebirb.html">Calliebirb 02.04.21</a></li>
-                <li><a href="Isaac.html">Isaac 09.04.21</a></li>
-                <li><a href="Wedding_Samples.html">Wedding Samples (2021-)</a></li>
+      <p>—Leon</p>
 
-            </ul>
-          </li>
+    </section>
+    
+   <figure class="image-container">
+      <img src="assets/media/St Davids Polaroid.jpeg" alt="St David's Polaroid" />
+    </figure>
 
-              <li><span class="caret">MUSIC VIDEOS</span>
-                <ul class="nested">
-                  <li><a href="https://youtu.be/NqbH4AaP2LU">LA1 COLLECTIVE - Ghost</a></li>
-                  <li><a href="https://youtu.be/SHtKtRB2nag">T.LEE - Gassed Like Dah</a></li>
-                  <li><a href="https://youtu.be/ehMHD5lm7eI">T.LEE - The Question</a></li>
-                </ul>
-  
-
-            </ul>
-        </li>
-        </ul>
-    </ul>
-    <ul id="dropdown">
-      <li><span class="caret">CONTACT ME</span>
-        <ul class="nested">
-          <li><a href="http://www.instagram.com/le.on_photos">Instagram</a></li>
-          <li><a href="https://www.youtube.com/channel/UCnFDM1ANjvW8WHgOWjKnncw">YouTube </a></li>
-          <li><a href="https://linktr.ee/newplace2frown">Linktree</a></li>
-          <li><a href="https://twitter.com/NewPlace2Frown">Twitter</a></li>
-          <li><a href="https://www.patreon.com/NewPlace2Frown">Patreon</a></li>
-        </ul>
-      </li>
-      </li>
-    </ul>
-    <ul>
-        <li><a href="License">License</a></li>
-       
-      </ul>
-  </nav>
-	</td>
-</table>
-
-<script src="About.js"></script>
+</div>
+  </main>
+  <script src="assets/js/site.js" defer></script>
 </body>
-
-
 </html>

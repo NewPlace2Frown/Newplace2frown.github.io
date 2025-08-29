@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>SHRINE OF LOST LINKS</title>
+<style>
+  body {
+    margin: 0;
+    background: #008080;
+    font-family: "MS Sans Serif", Tahoma, sans-serif;
+    font-size: 12px;
+    color: black;
+  }
+
+  a { color: blue; text-decoration: underline; }
+  a:visited { color: purple; }
+
+  .win {
+    position: absolute;
+    min-width: 220px;
+    max-width: 420px;
+    border: 2px solid #000;
+    background: #c0c0c0;
+    box-shadow: 2px 2px 0 #808080, -1px -1px 0 #fff;
+  }
+  .title {
+    background: linear-gradient(to right, navy, #1084d0);
+    color: white;
+    padding: 2px 4px;
+    font-weight: bold;
+    cursor: move;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .btns {
+    display: flex;
+    gap: 2px;
+  }
+  .btns button {
+    width: 16px;
+    height: 14px;
+    font-size: 10px;
+    border: 1px solid #000;
+    background: #c0c0c0;
+    padding: 0;
+    cursor: pointer;
+  }
+  .content {
+    background: #c0c0c0;
+    padding: 8px;
+    border-top: 2px solid #808080;
+  }
+
+  .counter {
+    position: fixed;
+    bottom: 6px;
+    right: 6px;
+    font-size: 11px;
+    background: #c0c0c0;
+    padding: 4px 6px;
+    border: 2px inset #fff;
+  }
+
+  .guestbook input, .guestbook textarea {
+    width: 100%;
+    margin-bottom: 4px;
+    font-family: inherit;
+    font-size: 12px;
+    border: 2px inset #fff;
+    background: white;
+  }
+  .guestbook button {
+    border: 2px outset #fff;
+    background: #c0c0c0;
+    padding: 2px 6px;
+    cursor: pointer;
+  }
+  .entry {
+    border: 2px inset #fff;
+    background: white;
+    margin-bottom: 4px;
+    padding: 4px;
+  }
+</style>
+</head>
+<body>
+
+<div class="win" id="w1" style="left: 40px; top: 40px;">
+  <div class="title">SHRINE OF LOST LINKS
+    <div class="btns">
+      <button onclick="this.closest('.win').remove()">×</button>
+      <button onclick="toggleMin(this)">_</button>
+    </div>
+  </div>
+  <div class="content">
+    <p><i>Under construction… forever.</i></p>
+    <p><a href="#" onclick="spawnPoem(); return false;">Open MEMORY.TXT</a></p>
+    <p><a href="#" onclick="openSource(); return false;">View Source</a></p>
+  </div>
+</div>
+
+<div class="win" id="w2" style="left: 280px; top: 100px;">
+  <div class="title">GUESTBOOK
+    <div class="btns">
+      <button onclick="this.closest('.win').remove()">×</button>
+      <button onclick="toggleMin(this)">_</button>
+    </div>
+  </div>
+  <div class="content">
+    <div class="guestbook">
+      <input id="name" placeholder="handle" maxlength="24" />
+      <textarea id="msg" rows="3" placeholder="leave a note" maxlength="200"></textarea>
+      <button onclick="sign()">Sign</button>
+      <div id="entries"></div>
+    </div>
+  </div>
+</div>
+
+<div class="counter" id="counter">visitors: 000000</div>
+
+<script>
+  // drag
+  document.querySelectorAll('.win').forEach(makeDraggable);
+  function makeDraggable(win){
+    const header = win.querySelector('.title');
+    let ox=0, oy=0, dragging=false;
+    header.addEventListener('mousedown', e=>{
+      dragging=true;
+      ox=e.clientX - win.offsetLeft;
+      oy=e.clientY - win.offsetTop;
+    });
+    document.addEventListener('mouseup', ()=> dragging=false);
+    document.addEventListener('mousemove', e=>{
+      if(!dragging) return;
+      win.style.left=(e.clientX-ox)+'px';
+      win.style.top=(e.clientY-oy)+'px';
+    });
+  }
+
+  function toggleMin(btn){
+    const c = btn.closest('.win').querySelector('.content');
+    c.style.display = (c.style.display==='none')?'block':'none';
+  }
+
+  function spawnPoem(){
+    const win=document.createElement('div');
+    win.className='win';
+    win.style.left='100px'; win.style.top='150px';
+    win.innerHTML=`<div class="title">MEMORY.TXT<div class="btns"><button onclick="this.closest('.win').remove()">×</button><button onclick="toggleMin(this)">_</button></div></div>
+    <div class="content"><pre>The web was a field of fireflies\nSome burned out, some learned\nTo be constellations.</pre></div>`;
+    document.body.appendChild(win);
+    makeDraggable(win);
+  }
+
+  function openSource(){
+    const src = document.documentElement.outerHTML.replaceAll('<','&lt;').replaceAll('>','&gt;');
+    const win=document.createElement('div');
+    win.className='win';
+    win.style.left='160px'; win.style.top='200px';
+    win.innerHTML=`<div class="title">VIEW-SOURCE<div class="btns"><button onclick="this.closest('.win').remove()">×</button><button onclick="toggleMin(this)">_</button></div></div>
+    <div class="content"><pre style="max-height:200px;overflow:auto;">${src}</pre></div>`;
+    document.body.appendChild(win);
+    makeDraggable(win);
+  }
+
+  // hit counter
+  (function(){
+    const k='shrine_hits_v2';
+    let n=parseInt(localStorage.getItem(k)||'0')+1;
+    localStorage.setItem(k,n);
+    document.getElementById('counter').textContent='visitors: '+String(n).padStart(6,'0');
+  })();
+
+  function sign(){
+    const name=document.getElementById('name').value.trim()||'anon';
+    const msg=document.getElementById('msg').value.trim();
+    if(!msg) return;
+    const k='shrine_guestbook_v2';
+    const list=JSON.parse(localStorage.getItem(k)||'[]');
+    list.unshift({name,msg,t:new Date().toLocaleString()});
+    localStorage.setItem(k,JSON.stringify(list));
+    document.getElementById('msg').value='';
+    renderEntries();
+  }
+
+  function renderEntries(){
+    const k='shrine_guestbook_v2';
+    const list=JSON.parse(localStorage.getItem(k)||'[]');
+    const wrap=document.getElementById('entries');
+    wrap.innerHTML='';
+    list.slice(0,5).forEach(e=>{
+      const d=document.createElement('div');
+      d.className='entry';
+      d.innerHTML=`<b>${e.name}</b> (${e.t})<br>${escapeHTML(e.msg)}`;
+      wrap.appendChild(d);
+    });
+  }
+
+  function escapeHTML(s){return s.replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"}[m]));}
+  renderEntries();
+</script>
+</body>
+</html>

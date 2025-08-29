@@ -1,0 +1,74 @@
+:root{
+  --sidebar-width:260px;
+  --stroke:#111;
+  --bg:#ffffff;
+  --text:#111;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Garamond:wght@400&display=swap');
+
+
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;font-family:Inter, 'Segoe UI', Roboto, Arial, sans-serif;color:var(--text);background:var(--bg)}
+
+/* Layout */
+.sidebar{
+  position:fixed;
+  left:0;top:0;bottom:0;
+  width:var(--sidebar-width);
+  background:var(--bg);
+  border-right:1px solid var(--stroke);
+  padding:18px 14px;
+  overflow:auto;
+  transform:translateX(0);
+  transition:transform .2s ease;
+  z-index:30;
+}
+.content{
+  margin-left:var(--sidebar-width);
+  padding:28px;
+  color:var(--text);
+}
+
+/* Navigation fragment styles (clean, hard edges) */
+.site-nav .nav-top{display:flex;align-items:center;padding:6px 6px 14px;border-bottom:1px solid var(--stroke);}
+.site-nav .logo img{max-width:140px;height:auto;display:block}
+.nav-list{list-style:none;padding:12px 0 0;margin:0}
+.nav-list li{margin:0}
+.nav-list a{display:block;padding:10px 8px;border-left:3px solid transparent;color:var(--text);text-decoration:none}
+.nav-list a:hover, .nav-list a:focus{background:transparent;outline:none;border-left-color:var(--stroke)}
+.nav-list a.active{border-left-color:var(--stroke);font-weight:600}
+
+/* details-based folders */
+.nav-folder{margin:8px 0}
+.nav-folder > summary{list-style:none;cursor:pointer;padding:10px 8px;border:1px solid transparent;border-left:3px solid transparent}
+.nav-folder[open] > summary{border-left-color:var(--stroke)}
+.nav-folder summary::-webkit-details-marker{display:none}
+.nav-folder ul{list-style:none;margin:6px 0 0;padding:0 0 0 6px;border-left:0}
+.nav-folder a{padding:8px 6px}
+
+/* Mobile / responsive */
+.mobile-toggle{display:none;position:fixed;left:12px;top:12px;z-index:60;background:var(--bg);border:1px solid var(--stroke);padding:7px 10px;color:var(--text);font-weight:600}
+.overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.06);z-index:25}
+
+@media (max-width:800px){
+  .sidebar{transform:translateX(-110%);width:var(--sidebar-width)}
+  .sidebar.open{transform:translateX(0)}
+  .content{margin-left:0;padding:18px}
+  .mobile-toggle{display:block}
+  .overlay.show{display:block}
+}
+
+/* Small visual tweaks */
+header h1{color:var(--text);margin-top:0}
+header h2{color:var(--text);margin-top:0; text-align: right;}
+
+/* Gallery */
+#portfolio-gallery{max-width:1000px;margin:18px auto}
+#gallery{display:block}
+#gallery img{border:1px solid var(--stroke);background:var(--bg)}
+#gallery-caption{font-size:0.95rem;color:rgba(0,0,0,0.7)}
+
+/* Prevent navigation flicker while nav fragment is loading */
+.nav-loading .sidebar{visibility:hidden;opacity:100}
+.nav-loading .mobile-toggle{visibility:hidden}
