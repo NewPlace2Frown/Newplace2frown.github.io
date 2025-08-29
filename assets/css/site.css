@@ -47,6 +47,8 @@ html,body{height:100%;margin:0;font-family:Inter, 'Segoe UI', Roboto, Arial, san
 .nav-folder ul{list-style:none;margin:6px 0 0;padding:0 0 0 6px;border-left:0}
 .nav-folder a{padding:8px 6px}
 
+
+
 /* Mobile / responsive */
 .mobile-toggle{display:none;position:fixed;left:12px;top:12px;z-index:60;background:var(--bg);border:1px solid var(--stroke);padding:7px 10px;color:var(--text);font-weight:600}
 .overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.06);z-index:25}
@@ -64,9 +66,13 @@ header h1{color:var(--text);margin-top:0}
 header h2{color:var(--text);margin-top:0; text-align: right;}
 
 /* Gallery */
-#portfolio-gallery{max-width:1000px;margin:18px auto}
+#portfolio-gallery{max-width:95%;max-height: 95%;margin:18px auto}
 #gallery{display:block}
-#gallery img{border:1px solid var(--stroke);background:var(--bg)}
+
+/* give gallery img a 2px stroke */
+/* make stroke responsive with gallery img */
+#gallery img{max-width:100%;height:auto;display:block;border:1px solid var(--stroke);border-image: round;background:var(--bg)}
+
 #gallery-caption{font-size:0.95rem;color:rgba(0,0,0,0.7)}
 
 /* Prevent navigation flicker while nav fragment is loading */
