@@ -1,0 +1,25 @@
+{
+  "": [
+    "/assets/media/B-Army Surplus.jpeg",
+    "/assets/media/Banjul Taxi.jpeg",
+    "/assets/media/Bay Sunset.jpeg",
+    "/assets/media/Cardiff Library.jpeg",
+    "/assets/media/Church Street.jpeg",
+    "/assets/media/Common Garden Street.jpeg",
+    "/assets/media/ESSO AFTER DARK.jpeg",
+    "/assets/media/St Davids Polaroid.jpeg",
+    "/assets/media/The Night Aretha Died (Reprise).jpeg",
+    "/assets/media/The River Lune.jpeg"
+  ],
+  "project1": [
+    "/assets/media/project1/Church Street.jpeg",
+    "/assets/media/project1/Common Garden Street.jpeg",
+    "/assets/media/project1/ESSO AFTER DARK.jpeg",
+    "/assets/media/project1/The Night Aretha Died (Reprise).jpeg",
+    "/assets/media/project1/The River Lune.jpeg"
+  ],
+  "project2": [
+    "/assets/media/project2/B-Army Surplus.jpeg",
+    "/assets/media/project2/Bay Sunset.jpeg"
+  ]
+}

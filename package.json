@@ -1,0 +1,16 @@
+{
+  "name": "simple-photoblog-site",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "test": "jest",
+    "generate:index": "node scripts/generate-index.js",
+    "generate:gallery": "node scripts/generate-gallery.js",
+    "prepare": "husky install"
+  },
+  "devDependencies": {
+    "jest": "^29.0.0",
+    "jest-environment-jsdom": "^29.0.0",
+    "husky": "^8.0.0"
+  }
+}
