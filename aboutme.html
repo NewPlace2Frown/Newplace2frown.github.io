@@ -11,17 +11,19 @@
 .content-wrapper {
   display: grid;
   grid-template-columns: 400px 1fr; /* Text gets mobile-like width, image takes remaining space */
-  gap: 1.5rem; /* Space between text and image */
+  gap: 1.2rem; /* Space between text and image */
   align-items: start;
   max-width: auto; /* Optional: limit overall container width */
   margin: 0 auto; /* Optional: center the container */
+  hyphens: auto;
 }
 
 /* Text styling */
 main.content section p {
   text-align: justify;
   hyphens: auto;
-  max-width: 100%; /* Ensure paragraphs don't exceed their container */
+  max-width: 95%; /* Ensure paragraphs don't exceed their container */
+
 }
 
 /* Image container styling */
