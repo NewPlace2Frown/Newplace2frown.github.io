@@ -3,16 +3,17 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>About — Photoblog</title>
+  <title>About — NewPlace2Frown</title>
   <link rel="stylesheet" href="assets/css/site.css">
+
 <style>
-/* Grid layout for text and image side by side */
+  /* Grid layout for text and image side by side */
 .content-wrapper {
   display: grid;
   grid-template-columns: 400px 1fr; /* Text gets mobile-like width, image takes remaining space */
-  gap: 3rem; /* Space between text and image */
+  gap: 1.5rem; /* Space between text and image */
   align-items: start;
-  max-width: 1200px; /* Optional: limit overall container width */
+  max-width: auto; /* Optional: limit overall container width */
   margin: 0 auto; /* Optional: center the container */
 }
 
@@ -40,7 +41,7 @@ figure.image-container img {
 /* Responsive: stack vertically on smaller screens */
 @media (max-width: 768px) {
   .content-wrapper {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1.1fr;
     gap: 1rem;
   }
 }
@@ -48,6 +49,8 @@ figure.image-container img {
 
 
 </head>
+
+
 <body>
   <button id="sidebarToggle" class="mobile-toggle" aria-label="Open navigation" aria-expanded="false">☰</button>
   <aside id="sidebar" class="sidebar" aria-label="Site navigation"></aside>
@@ -94,5 +97,7 @@ figure.image-container img {
 </div>
   </main>
   <script src="assets/js/site.js" defer></script>
+  <script src="../assets/js/gallery.js" defer></script>
+
 </body>
 </html>
