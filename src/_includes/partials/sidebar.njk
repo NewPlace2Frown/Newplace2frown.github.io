@@ -1,0 +1,20 @@
+<aside class="sidebar" aria-label="Site navigation">
+  <a class="logo" href="/" aria-label="Home">
+    <img src="/WebLogo1.gif" alt="NewPlace2Frown logo" />
+  </a>
+
+  <nav class="nav">
+    <ul>
+    {% for item in site.nav %}
+      <li>
+        <a href="{{ item.href }}"
+           class="{% if page.url and (page.url == item.href or page.url.startsWith(item.href)) %}active{% endif %}">
+          {{ item.label }}
+        </a>
+      </li>
+    {% endfor %}
+    </ul>
+  </nav>
+
+  {% include "partials/socials.njk" %}
+</aside>
