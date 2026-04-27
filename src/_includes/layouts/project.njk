@@ -1,0 +1,28 @@
+---
+layout: layouts/base.njk
+---
+<article class="project">
+  <header class="project-header">
+    <h1>{{ title }}</h1>
+    <div class="project-meta">
+      <span><strong>Place</strong>{{ place }}</span>
+      <span><strong>Year</strong>{{ year }}</span>
+      <span><strong>Frames</strong>{{ images.length }}</span>
+    </div>
+  </header>
+
+  {% if intro %}
+  <div class="project-intro">
+    {{ intro | safe }}
+  </div>
+  {% endif %}
+
+  <section class="project-images">
+  {% for img in images %}
+    <figure>
+      <img src="{{ img.src }}" alt="{{ img.alt or title }}" loading="lazy">
+      {% if img.caption %}<figcaption>{{ img.caption }}</figcaption>{% endif %}
+    </figure>
+  {% endfor %}
+  </section>
+</article>
