@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en">
+<head>
+{% include "partials/head-meta.njk" %}
+</head>
+<body class="layout-shell">
+  <button id="sidebarToggle" class="mobile-toggle" aria-label="Open navigation" aria-expanded="false" aria-controls="sidebar">☰</button>
+  <div id="overlay" class="overlay" tabindex="-1" hidden></div>
+
+  {% include "partials/sidebar.njk" %}
+
+  <main id="content" class="main">
+    {{ content | safe }}
+  </main>
+
+  <script src="/assets/js/site.js" defer></script>
+</body>
+</html>
