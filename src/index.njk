@@ -1,7 +1,26 @@
 ---
 layout: layouts/base.njk
 title: Home
+heroImages:
+  - { src: "/assets/media/Landing at Juffureh.jpg", alt: "Landing at Juffureh, Gambia 2019", caption: "Landing at Juffureh — Gambia, 2019" }
+  - { src: "/assets/media/ESSO AFTER DARK.jpeg", alt: "Esso after dark, Lancaster", caption: "Esso After Dark — Lancaster, 2020" }
+  - { src: "/assets/media/Bay Sunset.jpeg", alt: "Bay Sunset, Morecambe", caption: "Bay Sunset — Morecambe, 2021" }
+  - { src: "/assets/media/Lamin Crossovers.jpg", alt: "Lamin Crossovers", caption: "Lamin Crossovers — Gambia, 2023" }
+  - { src: "/assets/media/St Davids Polaroid.jpeg", alt: "St David's polaroid", caption: "St David's — Wales" }
 ---
-<!-- placeholder-home -->
-<h1>Hello!</h1>
-<p>Eleventy placeholder homepage. The real one ships in Plan 02.</p>
+<section class="home">
+  {% include "partials/hero-rotator.njk" %}
+
+  {% set latestJournal = collections.journal | reverse | first %}
+  {% if latestJournal %}
+    <aside class="latest">
+      <span class="latest-label">Latest from the journal</span>
+      <a class="latest-link" href="{{ latestJournal.url }}">
+        {{ latestJournal.data.title }}
+        <span class="latest-date">{{ latestJournal.date.toLocaleDateString('en-GB', { year: 'numeric', month: 'short', day: 'numeric' }) }}</span>
+      </a>
+    </aside>
+  {% endif %}
+</section>
+
+<script src="/assets/js/hero-rotator.js" defer></script>

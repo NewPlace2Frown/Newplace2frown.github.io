@@ -1,0 +1,8 @@
+<div class="hero" data-interval="9000">
+  {% for img in heroImages %}
+    <figure class="hero-frame{% if loop.first %} is-active{% endif %}">
+      <img src="{{ img.src }}" alt="{{ img.alt }}" {% if loop.first %}fetchpriority="high"{% else %}loading="lazy"{% endif %}>
+      <figcaption>{{ img.caption }}</figcaption>
+    </figure>
+  {% endfor %}
+</div>

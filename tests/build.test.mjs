@@ -11,8 +11,8 @@ describe('eleventy build', () => {
     expect(existsSync('_site/index.html')).toBe(true);
   });
 
-  it('homepage contains the placeholder marker', () => {
+  it('homepage has a hero', () => {
     const html = readFileSync('_site/index.html', 'utf8');
-    expect(html).toContain('<!-- placeholder-home -->');
+    expect(html).toContain('class="hero"');
   });
 });
