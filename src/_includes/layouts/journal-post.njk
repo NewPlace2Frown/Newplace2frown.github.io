@@ -1,0 +1,15 @@
+---
+layout: layouts/base.njk
+---
+<article class="journal-post">
+  <header class="page-header">
+    <h1>{{ title }}</h1>
+    <p class="page-subtitle">
+      {% if date %}<time datetime="{{ page.date.toISOString() }}">{{ page.date.toLocaleDateString('en-GB', { year: 'numeric', month: 'long', day: 'numeric' }) }}</time>{% endif %}
+    </p>
+  </header>
+
+  <div class="page-body">
+    {{ content | safe }}
+  </div>
+</article>

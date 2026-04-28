@@ -1,0 +1,26 @@
+---
+layout: layouts/base.njk
+title: Journal
+permalink: /journal/
+eleventyExcludeFromCollections: true
+---
+<header class="page-header">
+  <h1>Journal</h1>
+  <p class="page-subtitle">Notes, dispatches, occasional theory</p>
+</header>
+
+{% set posts = collections.journal | reverse %}
+{% if posts.length == 0 %}
+  <p>Nothing here yet.</p>
+{% else %}
+  <ul class="journal-index">
+  {% for post in posts %}
+    <li>
+      <a href="{{ post.url }}">
+        <span class="journal-date">{{ post.date.toLocaleDateString('en-GB', { year: 'numeric', month: 'short', day: 'numeric' }) }}</span>
+        <span class="journal-title">{{ post.data.title }}</span>
+      </a>
+    </li>
+  {% endfor %}
+  </ul>
+{% endif %}

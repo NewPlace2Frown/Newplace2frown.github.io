@@ -353,3 +353,40 @@ h1, h2, h3 {
   text-transform: uppercase;
   color: var(--ink-soft);
 }
+
+/* ---- Journal ---- */
+
+.journal-index {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid var(--rule);
+}
+.journal-index li {
+  border-bottom: 1px solid var(--rule);
+}
+.journal-index a {
+  display: flex;
+  gap: 1.5rem;
+  align-items: baseline;
+  padding: 14px 0;
+  text-decoration: none;
+  color: var(--ink);
+}
+.journal-date {
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  flex: 0 0 110px;
+}
+.journal-title {
+  font-family: var(--serif);
+  font-size: 1.1rem;
+}
+.journal-index a:hover .journal-title { color: var(--accent); }
+
+.journal-post .page-body {
+  max-width: var(--measure);
+}
