@@ -7,10 +7,35 @@
     <ul>
     {% for item in site.nav %}
       <li>
-        <a href="{{ item.href }}"
-           class="{% if page.url and (page.url == item.href or page.url.startsWith(item.href)) %}active{% endif %}">
-          {{ item.label }}
-        </a>
+        {% if item.children %}
+          {# A nav item with children renders as a <details> disclosure.
+             Open by default if the active page is in this branch. #}
+          {% set branchOpen = false %}
+          {% if page.url and page.url.startsWith(item.href) %}{% set branchOpen = true %}{% endif %}
+          <details class="nav-folder"{% if branchOpen %} open{% endif %}>
+            <summary>
+              <a href="{{ item.href }}"
+                 class="{% if page.url and page.url == item.href %}active{% endif %}">
+                {{ item.label }}
+              </a>
+            </summary>
+            <ul>
+            {% for child in item.children %}
+              <li>
+                <a href="{{ child.href }}"
+                   class="{% if page.url == child.href %}active{% endif %}">
+                  {{ child.label }}
+                </a>
+              </li>
+            {% endfor %}
+            </ul>
+          </details>
+        {% else %}
+          <a href="{{ item.href }}"
+             class="{% if page.url and (page.url == item.href or page.url.startsWith(item.href)) %}active{% endif %}">
+            {{ item.label }}
+          </a>
+        {% endif %}
       </li>
     {% endfor %}
     </ul>

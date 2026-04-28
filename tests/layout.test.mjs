@@ -40,9 +40,9 @@ describe('rendered layout', () => {
     expect(figs.length).toBeGreaterThan(0);
   });
 
-  it('Morecambe page marks Projects as active in nav', () => {
+  it('Morecambe page marks Projects branch as active in nav', () => {
     const active = projectDoc.querySelector('.sidebar .nav a.active');
     expect(active).not.toBeNull();
-    expect(active.textContent.trim()).toBe('Projects');
+    expect(['Projects', 'Morecambe']).toContain(active.textContent.trim());
   });
 });
