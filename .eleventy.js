@@ -25,6 +25,8 @@ export default function (eleventyConfig) {
     return [...arr].sort((a, b) => lastYear(b.data.year).localeCompare(lastYear(a.data.year)));
   });
 
+  eleventyConfig.addFilter('padStart', (s, len, char) => String(s).padStart(len, char));
+
   return {
     dir: {
       input: 'src',

@@ -436,15 +436,18 @@ h1, h2, h3 {
 }
 .bilingual p { max-width: none; }
 
-/* ---- Home (hero rotator + latest block) ---- */
+/* ---- Home (hero rotator + overlay + latest block) ---- */
 
-.home { /* main panel already has padding; hero needs to break out */ }
+.home {
+  /* main panel padding is set by .main; we let the hero break out of the padded column */
+  margin: -56px -64px 0;
+}
 
 .hero {
   position: relative;
   width: 100%;
-  aspect-ratio: 3 / 2;
-  margin: 0 0 3rem;
+  height: calc(100vh - 0px);
+  margin: 0;
   background: var(--ink);
   overflow: hidden;
 }
@@ -453,7 +456,7 @@ h1, h2, h3 {
   inset: 0;
   margin: 0;
   opacity: 0;
-  transition: opacity 1200ms ease-in-out;
+  transition: opacity 1500ms ease-in-out;
 }
 .hero-frame.is-active { opacity: 1; }
 .hero-frame img {
@@ -464,10 +467,10 @@ h1, h2, h3 {
 }
 .hero-frame figcaption {
   position: absolute;
-  left: 18px;
-  bottom: 16px;
+  left: 22px;
+  bottom: 18px;
   padding: 6px 10px;
-  background: rgba(0,0,0,0.45);
+  background: rgba(0,0,0,0.5);
   color: #fff;
   font-family: var(--mono);
   font-size: 0.72rem;
@@ -475,7 +478,39 @@ h1, h2, h3 {
   text-transform: uppercase;
 }
 
+.home-overlay {
+  position: absolute;
+  left: 0; right: 0; bottom: 64px;
+  padding: 0 64px;
+  pointer-events: none;
+  color: #fff;
+  text-shadow: 0 1px 14px rgba(0,0,0,0.4);
+  font-family: var(--serif);
+}
+.home-byline {
+  font-size: 1.6rem;
+  line-height: 1.25;
+  margin: 0 0 0.4em;
+  max-width: 28ch;
+  opacity: 0;
+  animation: home-fadeup 900ms 600ms ease-out forwards;
+}
+.home-meta {
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin: 0;
+  opacity: 0;
+  animation: home-fadeup 900ms 1100ms ease-out forwards;
+}
+@keyframes home-fadeup {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
 .latest {
+  margin: 56px 64px 0;
   border-top: 1px solid var(--rule);
   padding: 24px 0 0;
 }
@@ -506,6 +541,13 @@ h1, h2, h3 {
   color: var(--ink-soft);
 }
 .latest-link:hover { color: var(--accent); }
+
+@media (max-width: 900px) {
+  .home { margin: -80px -22px 0; }
+  .home-overlay { padding: 0 22px; bottom: 36px; }
+  .home-byline { font-size: 1.2rem; max-width: 22ch; }
+  .latest { margin: 40px 22px 0; }
+}
 
 /* ---- Sidebar disclosure (hierarchical Projects) ---- */
 
@@ -564,3 +606,47 @@ h1, h2, h3 {
   font-weight: 500;
 }
 .nav-folder > ul > li > a.active::after { right: 0; background: var(--ink); }
+
+/* ---- Specimen card (Bestiary-flavour project header) ---- */
+
+.specimen {
+  display: grid;
+  border: 1px solid var(--ink);
+  margin: 0 0 2rem;
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  max-width: 560px;
+}
+.specimen-row {
+  display: grid;
+  grid-template-columns: max-content 1fr 12px max-content 1fr;
+  gap: 8px;
+  align-items: center;
+  padding: 8px 12px;
+  border-top: 1px solid var(--rule);
+}
+.specimen-row:first-child { border-top: none; }
+.specimen-label {
+  color: var(--ink-soft);
+}
+.specimen-value {
+  color: var(--ink);
+}
+.specimen-spacer { background: var(--ink); height: 100%; min-height: 12px; }
+
+/* ---- Project image frame numbers ---- */
+
+.project-images figcaption {
+  display: flex;
+  gap: 0.75rem;
+  align-items: baseline;
+}
+.project-images figcaption .frame-no {
+  color: var(--ink-soft);
+  font-weight: 500;
+}
+.project-images figcaption .frame-caption {
+  color: var(--ink);
+}

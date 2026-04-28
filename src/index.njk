@@ -11,6 +11,11 @@ heroImages:
 <section class="home">
   {% include "partials/hero-rotator.njk" %}
 
+  <div class="home-overlay">
+    <p class="home-byline">A working photographer's notebook —<br>Lancaster, Morecambe, Wales, The Gambia.</p>
+    <p class="home-meta">— Leon Morgan</p>
+  </div>
+
   {% set latestJournal = collections.journal | reverse | first %}
   {% if latestJournal %}
     <aside class="latest">

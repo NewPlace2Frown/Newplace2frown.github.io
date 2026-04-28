@@ -2,6 +2,23 @@
 layout: layouts/base.njk
 ---
 <article class="project">
+  <aside class="specimen" aria-label="Project specimen card">
+    <div class="specimen-row specimen-top">
+      <span class="specimen-label">Specimen</span>
+      <span class="specimen-value">Nº {{ specimen or "—" }}</span>
+      <span class="specimen-spacer"></span>
+      <span class="specimen-label">Series</span>
+      <span class="specimen-value">{{ title }}</span>
+    </div>
+    <div class="specimen-row">
+      <span class="specimen-label">Kingdom</span>
+      <span class="specimen-value">Documentary</span>
+      <span class="specimen-spacer"></span>
+      <span class="specimen-label">Category</span>
+      <span class="specimen-value">{{ category or "Place" }}</span>
+    </div>
+  </aside>
+
   <header class="project-header">
     <h1>{{ title }}</h1>
     <div class="project-meta">
@@ -21,7 +38,10 @@ layout: layouts/base.njk
   {% for img in images %}
     <figure>
       <img src="{{ img.src }}" alt="{{ img.alt or title }}" loading="lazy">
-      {% if img.caption %}<figcaption>{{ img.caption }}</figcaption>{% endif %}
+      <figcaption>
+        <span class="frame-no">№ {{ loop.index | string | padStart(2, "0") }}</span>
+        {% if img.caption %}<span class="frame-caption">{{ img.caption }}</span>{% endif %}
+      </figcaption>
     </figure>
   {% endfor %}
   </section>

@@ -3,6 +3,8 @@ layout: layouts/project.njk
 title: Morecambe
 permalink: /projects/morecambe/
 place: Morecambe Bay, England
+specimen: "03"
+category: Place
 year: 2019–2025
 intro: >
   <p>Morecambe Bay photographs, made over six years walking the same stretch of coast in different weather, different company, different cameras. The bay is the constant; everything else changes.</p>
