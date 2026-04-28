@@ -390,3 +390,48 @@ h1, h2, h3 {
 .journal-post .page-body {
   max-width: var(--measure);
 }
+
+/* ---- Post: bilingual statements (EN / CY side-by-side, stack on mobile) ---- */
+
+.post-toc {
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  margin: 1.5rem 0 2.5rem;
+  padding: 1rem 1.25rem;
+  border: 1px solid var(--rule);
+}
+.post-toc ol { margin: 0; padding-left: 1.25rem; }
+.post-toc li { margin: 4px 0; }
+
+.bilingual {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem 2rem;
+  margin: 1rem 0 2.5rem;
+  padding-top: 0.5rem;
+  border-top: 1px solid var(--rule);
+}
+.bilingual .english,
+.bilingual .welsh {
+  min-width: 0;
+}
+.bilingual .welsh {
+  color: var(--ink-soft);
+  border-top: 1px dashed var(--rule);
+  padding-top: 1rem;
+}
+@media (min-width: 900px) {
+  .bilingual {
+    grid-template-columns: 1fr 1fr;
+  }
+  .bilingual .welsh {
+    border-top: none;
+    border-left: 1px dashed var(--rule);
+    padding-top: 0;
+    padding-left: 1.5rem;
+  }
+}
+.bilingual p { max-width: none; }
