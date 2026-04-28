@@ -1,0 +1,31 @@
+---
+layout: layouts/base.njk
+title: Projects
+permalink: /projects/
+eleventyExcludeFromCollections: true
+---
+<header class="page-header">
+  <h1>Projects</h1>
+  <p class="page-subtitle">Series, ongoing and complete</p>
+</header>
+
+<ul class="projects-index">
+{% set projects = collections.all
+  | filter("data.layout", "layouts/project.njk")
+  | sortByPlaceYear %}
+{% for proj in projects %}
+  <li class="project-card">
+    <a href="{{ proj.url }}">
+      {% if proj.data.images and proj.data.images.length > 0 %}
+        <figure>
+          <img src="{{ proj.data.images[0].src }}" alt="{{ proj.data.title }}" loading="lazy">
+        </figure>
+      {% endif %}
+      <div class="project-card-meta">
+        <span class="project-card-title">{{ proj.data.title }}</span>
+        <span class="project-card-year">{{ proj.data.year }}</span>
+      </div>
+    </a>
+  </li>
+{% endfor %}
+</ul>

@@ -285,3 +285,53 @@ h1, h2, h3 {
   text-transform: uppercase;
   color: var(--ink-soft);
 }
+
+/* ---- Projects index ---- */
+
+.projects-index {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 48px 32px;
+}
+.projects-index a {
+  display: block;
+  text-decoration: none;
+  color: var(--ink);
+}
+.projects-index figure {
+  margin: 0 0 0.75rem;
+  aspect-ratio: 3 / 2;
+  overflow: hidden;
+}
+.projects-index figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: opacity 200ms ease;
+}
+.projects-index a:hover figure img { opacity: 0.92; }
+.project-card-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+}
+.project-card-title {
+  font-family: var(--serif);
+  font-size: 1.15rem;
+}
+.project-card-year {
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+
+@media (max-width: 700px) {
+  .projects-index { grid-template-columns: 1fr; }
+}
