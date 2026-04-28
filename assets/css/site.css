@@ -335,3 +335,21 @@ h1, h2, h3 {
 @media (max-width: 700px) {
   .projects-index { grid-template-columns: 1fr; }
 }
+
+/* ---- Work (curated highlight reel) ---- */
+
+.work-images {
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+}
+.work-images figure { margin: 0; }
+.work-images img { width: 100%; height: auto; display: block; }
+.work-images figcaption {
+  margin-top: 8px;
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}

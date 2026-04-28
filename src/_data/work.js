@@ -1,0 +1,22 @@
+export default [
+  { src: '/assets/media/Landing at Juffureh.jpg', alt: 'Landing at Juffureh, Gambia 2019', caption: 'Landing at Juffureh, 2019' },
+  { src: '/assets/media/ESSO AFTER DARK.jpeg', alt: 'Esso after dark, Lancaster', caption: 'Esso After Dark, 2020' },
+  { src: '/assets/media/FANTASTIC.jpg', alt: 'Fantastic, Morecambe 2019', caption: 'Fantastic, 2019' },
+  { src: '/assets/media/Bay Sunset.jpeg', alt: 'Bay Sunset, Morecambe', caption: 'Bay Sunset, 2021' },
+  { src: '/assets/media/Lamin Crossovers.jpg', alt: 'Lamin Crossovers, Gambia 2023', caption: 'Lamin Crossovers, 2023' },
+  { src: '/assets/media/Senegambia Beach.jpeg', alt: 'Senegambia beach', caption: 'Senegambia, 2023' },
+  { src: '/assets/media/Eating Plus.jpg', alt: 'Eating Plus, Lancaster', caption: 'Eating Plus, 2020' },
+  { src: '/assets/media/Common Garden Street.jpeg', alt: 'Common Garden Street, Lancaster', caption: 'Common Garden Street' },
+  { src: '/assets/media/Cardiff Library.jpeg', alt: 'Cardiff Library', caption: 'Cardiff Library' },
+  { src: '/assets/media/Empty restaurant.jpeg', alt: 'Empty restaurant, Morecambe', caption: 'Empty restaurant, 2022' },
+  { src: '/assets/media/Figure on the Horizon.jpeg', alt: 'Figure on the horizon, Morecambe Bay', caption: 'Figure on the horizon, 2021' },
+  { src: '/assets/media/St Davids Polaroid.jpeg', alt: "St David's polaroid", caption: "St David's polaroid" },
+  { src: '/assets/media/Road to Makasutu.jpg', alt: 'Road to Makasutu', caption: 'Road to Makasutu, 2019' },
+  { src: '/assets/media/Spirited Sophistication.jpg', alt: 'Spirited Sophistication', caption: 'Spirited Sophistication' },
+  { src: '/assets/media/The need for speed.jpg', alt: 'The need for speed', caption: 'The need for speed' },
+  { src: '/assets/media/Mallorca DM.jpg', alt: 'Mallorca', caption: 'Mallorca' },
+  { src: '/assets/media/Ravers NSDB.jpg', alt: 'Ravers', caption: 'Ravers' },
+  { src: '/assets/media/Sunset from my Window.jpeg', alt: 'Sunset from my window', caption: 'Sunset from my window' },
+  { src: '/assets/media/The Night Aretha Died (Reprise).jpeg', alt: 'The night Aretha died', caption: 'The night Aretha died (reprise)' },
+  { src: '/assets/media/B-Army Surplus.jpeg', alt: 'B-Army Surplus', caption: 'B-Army Surplus' }
+];
