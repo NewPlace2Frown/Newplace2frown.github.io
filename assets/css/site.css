@@ -249,3 +249,39 @@ h1, h2, h3 {
   .main { margin-left: 0; padding: 80px 22px 64px; }
   .mobile-toggle { display: block; }
 }
+
+/* ---- Generic content pages (about, contact) ---- */
+
+.page-header {
+  margin-bottom: 2.5rem;
+}
+.page-header h1 {
+  margin-bottom: 0.25rem;
+}
+.page-subtitle {
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  margin: 0.5rem 0 0;
+}
+.page-body p {
+  max-width: var(--measure);
+}
+.page-body figure {
+  margin: 2rem 0;
+}
+.page-body figure img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.page-body figcaption {
+  margin-top: 8px;
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}

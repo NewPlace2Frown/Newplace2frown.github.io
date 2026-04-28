@@ -1,0 +1,13 @@
+---
+layout: layouts/base.njk
+---
+<article class="page">
+  <header class="page-header">
+    <h1>{{ title }}</h1>
+    {% if subtitle %}<p class="page-subtitle">{{ subtitle }}</p>{% endif %}
+  </header>
+
+  <div class="page-body">
+    {{ content | safe }}
+  </div>
+</article>
