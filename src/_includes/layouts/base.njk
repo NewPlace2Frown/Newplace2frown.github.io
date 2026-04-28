@@ -2,6 +2,16 @@
 <html lang="en">
 <head>
 {% include "partials/head-meta.njk" %}
+<script>
+  (function () {
+    try {
+      var stored = localStorage.getItem('npf-theme');
+      var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+      var theme = stored || (prefersDark ? 'dark' : 'light');
+      document.documentElement.setAttribute('data-theme', theme);
+    } catch {}
+  })();
+</script>
 </head>
 <body class="layout-shell">
   <button id="sidebarToggle" class="mobile-toggle" aria-label="Open navigation" aria-expanded="false" aria-controls="sidebar">☰</button>
@@ -14,5 +24,6 @@
   </main>
 
   <script src="/assets/js/site.js" defer></script>
+  <script src="/assets/js/theme.js" defer></script>
 </body>
 </html>
