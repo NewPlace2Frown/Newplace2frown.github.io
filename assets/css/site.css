@@ -700,8 +700,9 @@ html[data-theme="dark"] .specimen { border-color: var(--ink); }
 html[data-theme="dark"] .theme-icon-sun  { display: none; }
 html[data-theme="dark"] .theme-icon-moon { display: block; }
 
-/* Logo gets a clean inversion in dark mode (chrome reflection inverts roughly OK).
-   When a real dark-mode asset is added, swap this for an <img> source switch. */
+/* Logo in dark mode: invert + dim so the originally-black pixels land near --bg
+   instead of pure white. Real dark-mode logo asset would be cleaner — swap to
+   <img srcset> when one exists. */
 html[data-theme="dark"] .sidebar .logo img {
-  filter: invert(1) hue-rotate(180deg);
+  filter: invert(1) hue-rotate(180deg) brightness(0.18) contrast(1.4);
 }
