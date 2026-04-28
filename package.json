@@ -4,7 +4,9 @@
   "private": true,
   "type": "module",
   "scripts": {
+    "clean": "node -e \"import('node:fs/promises').then(fs => fs.rm('_site', { recursive: true, force: true }))\"",
     "dev": "eleventy --serve --quiet",
+    "dev:clean": "npm run clean && npm run dev",
     "build": "eleventy",
     "test": "vitest run",
     "test:watch": "vitest",
