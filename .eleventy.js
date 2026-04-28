@@ -15,13 +15,14 @@ export default function (eleventyConfig) {
     });
   });
 
-  // Sort projects by year descending (string compare on the leading 4 chars works for "2023", "2019–2025", etc).
+  // Sort projects by year descending. For ranges like "2019–2025" we use the
+  // most recent year (the last 4-digit run) so ongoing series rank high.
   eleventyConfig.addFilter('sortByPlaceYear', (arr) => {
-    return [...arr].sort((a, b) => {
-      const ay = String(a.data.year || '').slice(0, 4);
-      const by = String(b.data.year || '').slice(0, 4);
-      return by.localeCompare(ay);
-    });
+    const lastYear = (s) => {
+      const matches = String(s || '').match(/\d{4}/g);
+      return matches ? matches[matches.length - 1] : '';
+    };
+    return [...arr].sort((a, b) => lastYear(b.data.year).localeCompare(lastYear(a.data.year)));
   });
 
   return {
