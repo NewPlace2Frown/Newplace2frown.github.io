@@ -5,4 +5,11 @@
       <figcaption>{{ img.caption }}</figcaption>
     </figure>
   {% endfor %}
+
+  {% if heroByline %}
+    <div class="home-overlay">
+      <p class="home-byline">{{ heroByline | safe }}</p>
+      {% if heroBylineMeta %}<p class="home-meta">{{ heroBylineMeta }}</p>{% endif %}
+    </div>
+  {% endif %}
 </div>

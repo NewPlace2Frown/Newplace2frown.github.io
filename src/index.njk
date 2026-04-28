@@ -1,6 +1,8 @@
 ---
 layout: layouts/base.njk
 title: Home
+heroByline: "A working photographer's notebook —<br>Lancaster, Morecambe, Wales, The Gambia."
+heroBylineMeta: "— Leon Morgan"
 heroImages:
   - { src: "/assets/media/Landing at Juffureh.jpg", alt: "Landing at Juffureh, Gambia 2019", caption: "Landing at Juffureh — Gambia, 2019" }
   - { src: "/assets/media/ESSO AFTER DARK.jpeg", alt: "Esso after dark, Lancaster", caption: "Esso After Dark — Lancaster, 2020" }
@@ -10,11 +12,6 @@ heroImages:
 ---
 <section class="home">
   {% include "partials/hero-rotator.njk" %}
-
-  <div class="home-overlay">
-    <p class="home-byline">A working photographer's notebook —<br>Lancaster, Morecambe, Wales, The Gambia.</p>
-    <p class="home-meta">— Leon Morgan</p>
-  </div>
 
   {% set latestJournal = collections.journal | reverse | first %}
   {% if latestJournal %}

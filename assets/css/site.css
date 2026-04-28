@@ -480,12 +480,13 @@ h1, h2, h3 {
 
 .home-overlay {
   position: absolute;
-  left: 0; right: 0; bottom: 64px;
-  padding: 0 64px;
+  left: 0; right: 0; bottom: 56px;
+  padding: 0 48px;
   pointer-events: none;
   color: #fff;
-  text-shadow: 0 1px 14px rgba(0,0,0,0.4);
+  text-shadow: 0 1px 14px rgba(0,0,0,0.55);
   font-family: var(--serif);
+  z-index: 2;
 }
 .home-byline {
   font-size: 1.6rem;
@@ -575,9 +576,8 @@ h1, h2, h3 {
 .nav-folder[open] > summary::after { content: "−"; }
 .nav-folder > ul {
   list-style: none;
-  margin: 4px 0 8px 14px;
-  padding: 0 0 0 12px;
-  border-left: 1px solid var(--rule);
+  margin: 4px 0 8px;
+  padding: 0 0 0 14px;
 }
 .nav-folder > ul > li > a {
   display: inline-block;
@@ -674,41 +674,34 @@ html[data-theme="dark"] .hero-frame img {
 /* Specimen card border uses --ink so it inverts naturally; explicit just in case: */
 html[data-theme="dark"] .specimen { border-color: var(--ink); }
 
-/* ---- Theme toggle button ---- */
+/* ---- Theme toggle (minimal sun/moon glyph) ---- */
 
 .theme-toggle {
-  position: relative;
-  width: 44px;
-  height: 24px;
-  border: 1px solid var(--ink);
+  appearance: none;
   background: transparent;
-  border-radius: 12px;
+  border: 0;
+  padding: 6px 0;
+  margin: 12px 0 0;
   cursor: pointer;
-  font: inherit;
+  color: var(--ink-soft);
   display: inline-flex;
   align-items: center;
-  padding: 0 4px;
+  justify-content: flex-start;
+  line-height: 0;
+  transition: color 200ms ease;
 }
-.theme-toggle .knob {
-  width: 16px;
-  height: 16px;
-  border-radius: 50%;
-  background: var(--ink);
-  transition: transform 240ms ease;
-  display: block;
+.theme-toggle:hover,
+.theme-toggle:focus-visible {
+  color: var(--accent);
+  outline: none;
 }
-html[data-theme="dark"] .theme-toggle .knob { transform: translateX(20px); }
-.theme-toggle .label {
-  position: absolute;
-  left: -9999px;
-}
-.theme-row {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-family: var(--mono);
-  font-size: 0.7rem;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: var(--ink-soft);
+.theme-icon { display: block; }
+.theme-icon-moon { display: none; }
+html[data-theme="dark"] .theme-icon-sun  { display: none; }
+html[data-theme="dark"] .theme-icon-moon { display: block; }
+
+/* Logo gets a clean inversion in dark mode (chrome reflection inverts roughly OK).
+   When a real dark-mode asset is added, swap this for an <img> source switch. */
+html[data-theme="dark"] .sidebar .logo img {
+  filter: invert(1) hue-rotate(180deg);
 }
