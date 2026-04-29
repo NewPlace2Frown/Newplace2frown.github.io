@@ -635,20 +635,21 @@ h1, h2, h3 {
   display: inline-block;
 }
 .nav-folder[open] > summary::after { content: "−"; }
-.nav-folder > ul {
+.sidebar .nav .nav-folder > ul {
   list-style: none;
   margin: 4px 0 8px;
   padding: 0 0 0 22px;
 }
-.nav-folder > ul > li > a {
+.sidebar .nav .nav-folder > ul > li > a {
   display: inline-block;
   padding: 3px 0;
   font-size: 0.82rem;
   color: var(--ink-soft);
   text-decoration: none;
   position: relative;
+  letter-spacing: 0.005em;
 }
-.nav-folder > ul > li > a::after {
+.sidebar .nav .nav-folder > ul > li > a::after {
   content: "";
   position: absolute;
   left: 0;
@@ -658,15 +659,15 @@ h1, h2, h3 {
   background: currentColor;
   transition: right 200ms ease;
 }
-.nav-folder > ul > li > a:hover,
-.nav-folder > ul > li > a:focus-visible { color: var(--accent); }
-.nav-folder > ul > li > a:hover::after,
-.nav-folder > ul > li > a:focus-visible::after { right: 0; }
-.nav-folder > ul > li > a.active {
+.sidebar .nav .nav-folder > ul > li > a:hover,
+.sidebar .nav .nav-folder > ul > li > a:focus-visible { color: var(--accent); }
+.sidebar .nav .nav-folder > ul > li > a:hover::after,
+.sidebar .nav .nav-folder > ul > li > a:focus-visible::after { right: 0; }
+.sidebar .nav .nav-folder > ul > li > a.active {
   color: var(--ink);
   font-weight: 500;
 }
-.nav-folder > ul > li > a.active::after { right: 0; background: var(--ink); }
+.sidebar .nav .nav-folder > ul > li > a.active::after { right: 0; background: var(--ink); }
 
 /* ---- Specimen card (Bestiary-flavour project header) ---- */
 
