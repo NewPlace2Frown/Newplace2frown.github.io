@@ -19,18 +19,23 @@
     return;
   }
 
-  // FROWN weight cycle — Big Shoulders Display ranges 400/600/800.
+  // FROWN cycle — Bowlby is single-weight, so we vary letter-spacing and
+  // periodically swap to alternate faces. CSS handles the transitions.
   const frownStyles = [
-    { fontWeight: 800 },
-    { fontWeight: 600 },
-    { fontWeight: 400 },
-    { fontWeight: 600 }
+    { letterSpacing: '-0.015em', alt: null },        // 1. base Bowlby
+    { letterSpacing: '0.02em',   alt: null },        // 2. ease open
+    { letterSpacing: '0.08em',   alt: null },        // 3. pulse wide
+    { letterSpacing: '-0.025em', alt: 'inter' },     // 4. swap to Inter
+    { letterSpacing: '0.02em',   alt: 'inter' },     // 5. Inter wide
+    { letterSpacing: '0',        alt: 'serif' },     // 6. swap to serif
+    { letterSpacing: '0.04em',   alt: 'serif' },     // 7. serif wide
+    { letterSpacing: '-0.015em', alt: null }         // 8. back to base
   ];
 
-  const REVEAL_STEP_MS = 70;
-  const FROWN_STEP_MS = 700;
-  const FROWN_HOLD_AFTER_CYCLE_MS = 1200;
-  const RESET_FADE_MS = 500;
+  const REVEAL_STEP_MS = 140;            // slower line-by-line reveal
+  const FROWN_STEP_MS = 450;             // each FROWN variant beat
+  const FROWN_HOLD_AFTER_CYCLE_MS = 350; // brief hold before reset
+  const RESET_FADE_MS = 280;             // quicker fade out
 
   let cancelled = false;
   let timeouts = [];
@@ -46,8 +51,12 @@
   };
 
   const applyFrownStyle = (style) => {
-    frown.style.fontWeight = style.fontWeight;
-    if (style.fontStyle) frown.style.fontStyle = style.fontStyle;
+    frown.style.letterSpacing = style.letterSpacing;
+    if (style.alt) {
+      frown.dataset.alt = style.alt;
+    } else {
+      delete frown.dataset.alt;
+    }
   };
 
   async function loop() {

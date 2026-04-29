@@ -67,20 +67,23 @@ html, body {
   display: grid;
   grid-template-columns: 1fr;
   row-gap: 0;
-  font-family: 'Big Shoulders Display', 'Arial Black', sans-serif;
-  font-weight: 800;
-  font-size: 2.1rem;
-  line-height: 0.92;
-  letter-spacing: 0.01em;
+  font-family: 'Bowlby One', 'Arial Black', sans-serif;
+  font-weight: 400; /* Bowlby is single-weight; 400 is the only available cut */
+  font-size: 2rem;
+  line-height: 0.95;
+  letter-spacing: -0.015em;
   color: var(--ink);
   text-shadow: 2px 2px 0 var(--rule);
+  /* Faux extra weight to push Bowlby toward Rig Solid's heavier silhouette.
+     -webkit-text-stroke is non-standard but supported in all modern browsers. */
+  -webkit-text-stroke: 0.6px var(--ink);
 }
 .logo-line {
   display: block;
   /* hidden until the reveal animation flags the line */
   opacity: 0;
   transform: translateY(-2px);
-  transition: opacity 180ms ease, transform 180ms ease;
+  transition: opacity 180ms ease, transform 180ms ease, letter-spacing 240ms ease;
 }
 .logo-line.is-visible {
   opacity: 1;
@@ -88,14 +91,28 @@ html, body {
 }
 .logo-numeral {
   /* II tucked just under the E of PLACE, not flung out right */
-  padding-left: 1.4em;
-  font-weight: 600;
+  padding-left: 1.6em;
+  font-size: 0.78em;
   letter-spacing: 0.08em;
-  font-size: 0.85em;
+  /* No extra stroke on II — keep it as a marker, not a line of letters */
+  -webkit-text-stroke: 0;
 }
 .logo-frown {
-  /* FROWN gets the rotating weight cycle */
-  font-style: normal;
+  /* FROWN gets the rotating animation; transitions handled by JS-set styles */
+  transition: letter-spacing 240ms ease, font-family 0ms;
+}
+/* Alternate faces for FROWN's cycle. CSS transitions on letter-spacing
+   give the smooth pulse; font-family swaps are abrupt by design. */
+.logo-frown[data-alt="inter"] {
+  font-family: 'Inter', 'Helvetica Neue', sans-serif;
+  font-weight: 800;
+  -webkit-text-stroke: 0;
+}
+.logo-frown[data-alt="serif"] {
+  font-family: var(--serif);
+  font-weight: 500;
+  font-style: italic;
+  -webkit-text-stroke: 0;
 }
 
 /* Visually hidden but still announced by screen readers */
