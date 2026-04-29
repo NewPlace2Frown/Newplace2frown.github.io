@@ -66,14 +66,14 @@ html, body {
 .logo-wordmark {
   display: grid;
   grid-template-columns: 1fr;
-  row-gap: 1px;
-  font-family: var(--serif);
-  font-weight: 700;
-  font-size: 1.55rem;
-  line-height: 0.95;
-  letter-spacing: 0.005em;
+  row-gap: 0;
+  font-family: 'Big Shoulders Display', 'Arial Black', sans-serif;
+  font-weight: 800;
+  font-size: 2.1rem;
+  line-height: 0.92;
+  letter-spacing: 0.01em;
   color: var(--ink);
-  text-shadow: 3px 3px 0 var(--ink-soft);
+  text-shadow: 2px 2px 0 var(--rule);
 }
 .logo-line {
   display: block;
@@ -87,12 +87,14 @@ html, body {
   transform: translateY(0);
 }
 .logo-numeral {
-  /* II hangs to the right, Roman-numeral specimen-card style */
-  text-align: right;
-  letter-spacing: 0.05em;
+  /* II tucked just under the E of PLACE, not flung out right */
+  padding-left: 1.4em;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  font-size: 0.85em;
 }
 .logo-frown {
-  /* FROWN gets the rotating font face */
+  /* FROWN gets the rotating weight cycle */
   font-style: normal;
 }
 

@@ -19,12 +19,12 @@
     return;
   }
 
-  // FROWN font cycle within the field-journal type system.
+  // FROWN weight cycle — Big Shoulders Display ranges 400/600/800.
   const frownStyles = [
-    { fontWeight: 700, fontStyle: 'normal' },
-    { fontWeight: 700, fontStyle: 'italic' },
-    { fontWeight: 400, fontStyle: 'normal' },
-    { fontWeight: 400, fontStyle: 'italic' }
+    { fontWeight: 800 },
+    { fontWeight: 600 },
+    { fontWeight: 400 },
+    { fontWeight: 600 }
   ];
 
   const REVEAL_STEP_MS = 70;
@@ -47,7 +47,7 @@
 
   const applyFrownStyle = (style) => {
     frown.style.fontWeight = style.fontWeight;
-    frown.style.fontStyle = style.fontStyle;
+    if (style.fontStyle) frown.style.fontStyle = style.fontStyle;
   };
 
   async function loop() {
