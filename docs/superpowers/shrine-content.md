@@ -42,3 +42,14 @@ right away.
 ---
 
 **Endpoint wired:** `https://formspree.io/f/mjglbenq` (set in `src/_data/site.js`).
+
+## Easter eggs reference (private)
+
+| Trigger | Result |
+|---|---|
+| Konami code | navigate to /shrine/ |
+| Type "frown" anywhere (not in a form) | navigate to /shrine/ |
+| Console hint on homepage | passive log explaining /shrine/ |
+| Triple-click the wordmark | brief FROWN frenzy |
+| Hold Q on a project page for 2s | specimen note in browser console |
+| Visit homepage between 00:00 and 00:59 | dateline appears at top of homepage |
