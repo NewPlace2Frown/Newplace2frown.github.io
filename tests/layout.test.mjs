@@ -20,8 +20,11 @@ describe('rendered layout', () => {
     );
   });
 
-  it('homepage has the logo', () => {
-    expect(homeDoc.querySelector('.sidebar .logo img')).not.toBeNull();
+  it('homepage has the typeset wordmark logo', () => {
+    const wordmark = homeDoc.querySelector('.sidebar .logo .logo-wordmark');
+    expect(wordmark).not.toBeNull();
+    const lines = [...wordmark.querySelectorAll('.logo-line')].map(l => l.textContent.trim());
+    expect(lines).toEqual(['NEW', 'PLACE', 'II', 'FROWN']);
   });
 
   it('homepage has socials in the sidebar', () => {

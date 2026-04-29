@@ -53,24 +53,60 @@ html, body {
   padding: 56px 64px 96px;
 }
 
-/* ---- Logo ---- */
+/* ---- Logo (typeset wordmark) ---- */
 
 .sidebar .logo {
   display: block;
-  width: 96px;
+  text-decoration: none;
+  color: inherit;
   padding: 0;
-  line-height: 0;
+  /* enough vertical room to host the four stacked lines including the offset shadow */
+  min-height: 130px;
 }
-.sidebar .logo img {
-  width: 100%;
-  height: auto;
+.logo-wordmark {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 1px;
+  font-family: var(--serif);
+  font-weight: 700;
+  font-size: 1.55rem;
+  line-height: 0.95;
+  letter-spacing: 0.005em;
+  color: var(--ink);
+  text-shadow: 3px 3px 0 var(--ink-soft);
+}
+.logo-line {
   display: block;
-  transition: opacity 200ms ease, transform 400ms ease;
-  opacity: 0.95;
+  /* hidden until the reveal animation flags the line */
+  opacity: 0;
+  transform: translateY(-2px);
+  transition: opacity 180ms ease, transform 180ms ease;
 }
-.sidebar .logo:hover img {
+.logo-line.is-visible {
   opacity: 1;
-  transform: scale(1.02);
+  transform: translateY(0);
+}
+.logo-numeral {
+  /* II hangs to the right, Roman-numeral specimen-card style */
+  text-align: right;
+  letter-spacing: 0.05em;
+}
+.logo-frown {
+  /* FROWN gets the rotating font face */
+  font-style: normal;
+}
+
+/* Visually hidden but still announced by screen readers */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
 
 /* ---- Nav ---- */
@@ -700,9 +736,5 @@ html[data-theme="dark"] .specimen { border-color: var(--ink); }
 html[data-theme="dark"] .theme-icon-sun  { display: none; }
 html[data-theme="dark"] .theme-icon-moon { display: block; }
 
-/* Logo in dark mode: invert + dim so the originally-black pixels land near --bg
-   instead of pure white. Real dark-mode logo asset would be cleaner — swap to
-   <img srcset> when one exists. */
-html[data-theme="dark"] .sidebar .logo img {
-  filter: invert(1) hue-rotate(180deg) brightness(0.18) contrast(1.4);
-}
+/* Logo wordmark uses --ink for fill and --ink-soft for the drop shadow,
+   so it inverts naturally in dark mode. No filter needed. */
