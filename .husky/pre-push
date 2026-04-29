@@ -1,5 +1,5 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
-# Run gallery generator before push
-node scripts/generate-gallery.js
+# Run the test suite before pushing.
+npm test
