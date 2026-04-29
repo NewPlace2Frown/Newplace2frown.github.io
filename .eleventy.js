@@ -5,11 +5,6 @@ export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy('favicon.gif');
   eleventyConfig.addWatchTarget('src/');
 
-  // On Windows, re-copying large image trees on every dev rebuild causes
-  // intermittent EPERM lock errors. Tell the dev server to symlink/passthrough
-  // assets instead of re-copying them.
-  eleventyConfig.setServerPassthroughCopyBehavior('passthrough');
-
   // Filter items in a collection by a nested key matching a value.
   // Usage: collections.all | filter("data.layout", "layouts/project.njk")
   eleventyConfig.addFilter('filter', (arr, keyPath, value) => {
