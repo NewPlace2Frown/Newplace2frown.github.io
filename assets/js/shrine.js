@@ -188,4 +188,45 @@ Some looked, briefly, like Malkovich.
       wins[0].remove();
     }
   });
+
+  // ---------- Guestbook submission ----------
+  const form = document.getElementById('guestbook-form');
+  const status = document.getElementById('gb-status');
+  if (form && status) {
+    const endpoint = window.SHRINE_FORMSPREE_ENDPOINT;
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const name = document.getElementById('gb-name').value.trim() || 'anon';
+      const msg  = document.getElementById('gb-msg').value.trim();
+      if (!msg) return;
+      const honey = form.querySelector('input[name="_gotcha"]');
+      if (honey && honey.value) return; // bot
+
+      status.textContent = 'sending...';
+      try {
+        if (!endpoint) throw new Error('no endpoint configured');
+        const res = await fetch(endpoint, {
+          method: 'POST',
+          headers: { 'Accept': 'application/json' },
+          body: new FormData(form)
+        });
+        if (!res.ok) throw new Error('submission failed');
+        let pending = [];
+        try { pending = JSON.parse(localStorage.getItem('shrine_pending_entries') || '[]'); } catch {}
+        pending.unshift({
+          name, msg,
+          t: new Date().toLocaleDateString('en-GB'),
+          pending: true
+        });
+        pending = pending.slice(0, 5);
+        localStorage.setItem('shrine_pending_entries', JSON.stringify(pending));
+        document.getElementById('gb-msg').value = '';
+        status.textContent = 'sent. yours appears immediately; everyone else sees it after review.';
+        if (typeof window.__shrineRenderEntries === 'function') window.__shrineRenderEntries();
+      } catch (err) {
+        status.textContent = "sorry -- that didn't go through. try again later?";
+      }
+    });
+  }
+
 })();

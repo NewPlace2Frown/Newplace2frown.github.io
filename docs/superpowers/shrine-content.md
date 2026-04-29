@@ -38,3 +38,7 @@ If junk slips through, the moderation flow below catches it.
 The pending render is intentionally distinct ("pending review" suffix) so
 visitors don't think they were censored if they don't see their note publicly
 right away.
+
+---
+
+**Endpoint wired:** `https://formspree.io/f/mjglbenq` (set in `src/_data/site.js`).

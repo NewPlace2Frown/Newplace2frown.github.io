@@ -3,6 +3,7 @@ export default {
   tagline: 'Documentary photography by Leon Morgan',
   url: 'https://newplace2frown.com',
   shopUrl: 'https://shop.newplace2frown.com',
+  formspreeEndpoint: 'https://formspree.io/f/mjglbenq',
   author: {
     name: 'Leon Morgan',
     email: 'newplace2frown@gmail.com'
