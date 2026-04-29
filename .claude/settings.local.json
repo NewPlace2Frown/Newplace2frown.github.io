@@ -1,0 +1,30 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git config *)",
+      "WebFetch(domain:shopify.newplace2frown.com)",
+      "WebFetch(domain:newplace2frown.myshopify.com)",
+      "WebFetch(domain:newplace2frown.com)",
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)",
+      "Bash(git commit *)",
+      "Bash(npm install *)",
+      "Bash(npx @11ty/eleventy --version)",
+      "Bash(npm test *)",
+      "Bash(npx vitest *)",
+      "Bash(npm run *)",
+      "Bash(git rm *)",
+      "Bash(xxd)",
+      "Bash(grep -vE \"^\\(project1|project2|index\\\\.json\\)$\")",
+      "Bash(curl -s http://nonexistent)",
+      "Bash(python3 -c ' *)",
+      "Bash(rmdir scripts *)",
+      "Bash(rmdir photos *)",
+      "Bash(rmdir projects *)",
+      "Bash(rmdir blog *)",
+      "Bash(tasklist)",
+      "Bash(wmic process *)",
+      "PowerShell(Get-CimInstance Win32_Process -Filter \"Name='node.exe'\")"
+    ]
+  }
+}
