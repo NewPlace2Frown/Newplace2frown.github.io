@@ -19,17 +19,25 @@
     return;
   }
 
-  // FROWN cycle — Bowlby is single-weight, so we vary letter-spacing and
-  // periodically swap to alternate faces. CSS handles the transitions.
+  // FROWN cycle — equal time across three faces (Bowlby, Inter, serif),
+  // each with 3 letter-spacing variations for visual interest.
+  // CSS handles the smooth letter-spacing transitions; family swaps are
+  // abrupt by design.
   const frownStyles = [
-    { letterSpacing: '-0.015em', alt: null },        // 1. base Bowlby
+    // Bowlby trio
+    { letterSpacing: '-0.015em', alt: null },        // 1. tight base
     { letterSpacing: '0.02em',   alt: null },        // 2. ease open
     { letterSpacing: '0.08em',   alt: null },        // 3. pulse wide
-    { letterSpacing: '-0.025em', alt: 'inter' },     // 4. swap to Inter
-    { letterSpacing: '0.02em',   alt: 'inter' },     // 5. Inter wide
-    { letterSpacing: '0',        alt: 'serif' },     // 6. swap to serif
-    { letterSpacing: '0.04em',   alt: 'serif' },     // 7. serif wide
-    { letterSpacing: '-0.015em', alt: null }         // 8. back to base
+    // Inter trio
+    { letterSpacing: '-0.025em', alt: 'inter' },     // 4. Inter tight
+    { letterSpacing: '0.01em',   alt: 'inter' },     // 5. Inter base
+    { letterSpacing: '0.05em',   alt: 'inter' },     // 6. Inter wide
+    // Serif trio (italic for "frown" character)
+    { letterSpacing: '-0.01em',  alt: 'serif' },     // 7. serif tight italic
+    { letterSpacing: '0.02em',   alt: 'serif-up' },  // 8. serif upright
+    { letterSpacing: '0.06em',   alt: 'serif' },     // 9. serif wide italic
+    // Return to base for the loop reset
+    { letterSpacing: '-0.015em', alt: null }         // 10. back to Bowlby
   ];
 
   const REVEAL_STEP_MS = 140;            // slower line-by-line reveal

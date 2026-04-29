@@ -114,6 +114,12 @@ html, body {
   font-style: italic;
   -webkit-text-stroke: 0;
 }
+.logo-frown[data-alt="serif-up"] {
+  font-family: var(--serif);
+  font-weight: 500;
+  font-style: normal;
+  -webkit-text-stroke: 0;
+}
 
 /* Visually hidden but still announced by screen readers */
 .visually-hidden {
@@ -632,12 +638,12 @@ h1, h2, h3 {
 .nav-folder > ul {
   list-style: none;
   margin: 4px 0 8px;
-  padding: 0 0 0 14px;
+  padding: 0 0 0 22px;
 }
 .nav-folder > ul > li > a {
   display: inline-block;
-  padding: 4px 0;
-  font-size: 0.88rem;
+  padding: 3px 0;
+  font-size: 0.82rem;
   color: var(--ink-soft);
   text-decoration: none;
   position: relative;
@@ -735,8 +741,8 @@ html[data-theme="dark"] .specimen { border-color: var(--ink); }
   appearance: none;
   background: transparent;
   border: 0;
-  padding: 6px 0;
-  margin: 12px 0 0;
+  padding: 8px 8px 8px 0;
+  margin: 16px 0 4px;
   cursor: pointer;
   color: var(--ink-soft);
   display: inline-flex;
