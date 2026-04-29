@@ -1,0 +1,64 @@
+---
+permalink: /shrine/
+eleventyExcludeFromCollections: true
+title: SHRINE OF LOST LINKS
+layout: false
+---
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>SHRINE OF LOST LINKS</title>
+  <link rel="stylesheet" href="/assets/css/shrine.css">
+</head>
+<body>
+<div class="shrine-stage" id="shrine">
+
+  <div class="win" id="w-shrine" style="left: 40px; top: 40px;">
+    <div class="title">SHRINE OF LOST LINKS
+      <div class="btns">
+        <button data-act="close">x</button>
+        <button data-act="min">_</button>
+      </div>
+    </div>
+    <div class="content">
+      <p><i>Under construction... forever.</i></p>
+      <p><a href="#" data-shrine="poem">Open MEMORY.TXT</a></p>
+      <p><a href="#" data-shrine="gallery">Open GALLERY.EXE</a></p>
+      <p><a href="#" data-shrine="source">View Source</a></p>
+    </div>
+  </div>
+
+  <div class="win" id="w-guestbook" style="left: 320px; top: 100px;">
+    <div class="title">GUESTBOOK
+      <div class="btns">
+        <button data-act="close">x</button>
+        <button data-act="min">_</button>
+      </div>
+    </div>
+    <div class="content">
+      <form id="guestbook-form" autocomplete="off">
+        <div class="form-row"><input type="text" name="name" id="gb-name" placeholder="handle" maxlength="24" required></div>
+        <div class="form-row"><textarea name="msg" id="gb-msg" placeholder="leave a note" maxlength="280" required></textarea></div>
+        <div style="position:absolute; left:-9999px;" aria-hidden="true">
+          <label>Leave blank: <input type="text" name="_gotcha" tabindex="-1"></label>
+        </div>
+        <div class="form-row"><button type="submit" class="action">Sign</button></div>
+      </form>
+      <div id="gb-status" style="margin: 4px 0 6px; font-size: 11px;"></div>
+      <div id="gb-entries"></div>
+    </div>
+  </div>
+
+  <div class="counter" id="counter">visitors: 000000</div>
+  <button class="escape-hatch" id="escape-hatch">[ escape to surface ]</button>
+
+  <script id="gb-seed" type="application/json">{{ guestbook | dump | safe }}</script>
+  <script id="gallery-seed" type="application/json">{{ shrineImages | dump | safe }}</script>
+  <script>window.SHRINE_FORMSPREE_ENDPOINT = "{{ site.formspreeEndpoint or '' }}";</script>
+</div>
+<script src="/assets/js/shrine.js" defer></script>
+</body>
+</html>
