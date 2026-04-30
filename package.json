@@ -8,14 +8,16 @@
     "dev": "eleventy --serve --quiet",
     "dev:clean": "npm run clean && npm run dev",
     "build": "eleventy",
+    "optimise:images": "node scripts/optimise-images.mjs",
     "test": "vitest run",
     "test:watch": "vitest",
     "prepare": "husky install"
   },
   "devDependencies": {
     "@11ty/eleventy": "^3.0.0",
-    "vitest": "^2.1.0",
+    "husky": "^8.0.0",
     "linkedom": "^0.18.0",
-    "husky": "^8.0.0"
+    "sharp": "^0.34.5",
+    "vitest": "^2.1.0"
   }
 }
