@@ -1,7 +1,17 @@
+import pluginRss from '@11ty/eleventy-plugin-rss';
+
 export default function (eleventyConfig) {
+  eleventyConfig.addPlugin(pluginRss);
+
   eleventyConfig.addPassthroughCopy('assets');
   eleventyConfig.addPassthroughCopy('favicon.ico');
   eleventyConfig.addWatchTarget('src/');
+
+  // Drafts live in src/journal-drafts/ and are excluded from production builds.
+  // BUILD_DRAFTS=1 includes them (used by `npm run dev:drafts`).
+  if (process.env.BUILD_DRAFTS !== '1') {
+    eleventyConfig.ignores.add('src/journal-drafts/');
+  }
 
   // Filter items in a collection by a nested key matching a value.
   // Usage: collections.all | filter("data.layout", "layouts/project.njk")

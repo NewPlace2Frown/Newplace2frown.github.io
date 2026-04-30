@@ -448,6 +448,26 @@ h1, h2, h3 {
 }
 .journal-index a:hover .journal-title { color: var(--accent); }
 
+.journal-rss {
+  margin-top: 3rem;
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+.journal-rss a {
+  color: var(--ink-soft);
+  text-decoration: none;
+  border-bottom: 1px solid var(--rule);
+  padding-bottom: 1px;
+  transition: color 200ms ease, border-color 200ms ease;
+}
+.journal-rss a:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
 .journal-post .page-body {
   max-width: var(--measure);
 }

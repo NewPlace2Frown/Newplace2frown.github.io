@@ -7,6 +7,7 @@
     "clean": "node -e \"import('node:fs/promises').then(fs => fs.rm('_site', { recursive: true, force: true }))\"",
     "dev": "eleventy --serve --quiet",
     "dev:clean": "npm run clean && npm run dev",
+    "dev:drafts": "cross-env BUILD_DRAFTS=1 eleventy --serve --quiet",
     "build": "eleventy",
     "optimise:images": "node scripts/optimise-images.mjs",
     "test": "vitest run",
@@ -15,6 +16,8 @@
   },
   "devDependencies": {
     "@11ty/eleventy": "^3.0.0",
+    "@11ty/eleventy-plugin-rss": "^3.0.0",
+    "cross-env": "^10.1.0",
     "husky": "^8.0.0",
     "linkedom": "^0.18.0",
     "sharp": "^0.34.5",
