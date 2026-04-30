@@ -1,0 +1,16 @@
+---
+permalink: /sitemap.xml
+eleventyExcludeFromCollections: true
+layout: false
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+{%- for page in collections.all -%}
+{%- if page.url and not page.data.eleventyExcludeFromCollections and page.url != '/shrine/' %}
+  <url>
+    <loc>{{ site.url }}{{ page.url }}</loc>
+    <lastmod>{{ page.date.toISOString().slice(0,10) }}</lastmod>
+  </url>
+{%- endif -%}
+{%- endfor %}
+</urlset>
