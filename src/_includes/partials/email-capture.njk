@@ -1,0 +1,10 @@
+<aside class="email-capture" aria-label="Newsletter signup">
+  <span class="latest-label">Newsletter</span>
+  <p class="email-capture-copy">New prints and journal dispatches, monthly-ish. No noise.</p>
+  <form action="https://buttondown.com/api/emails/embed-subscribe/{{ site.buttondown }}"
+        method="post" target="_blank" class="email-capture-form">
+    <label class="visually-hidden" for="bd-email">Email address</label>
+    <input type="email" name="email" id="bd-email" placeholder="you@example.com" required>
+    <button type="submit">Subscribe</button>
+  </form>
+</aside>

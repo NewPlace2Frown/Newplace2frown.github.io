@@ -833,6 +833,71 @@ h1, h2, h3 {
   .home-shop-hook { margin: 40px 22px 0; }
 }
 
+/* ---- Email capture (Buttondown embed) ---- */
+
+.email-capture {
+  margin-top: 4rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--rule);
+  max-width: var(--measure);
+}
+.email-capture-copy {
+  margin: 0.4rem 0 1rem;
+  font-family: var(--serif);
+  font-size: 1.1rem;
+}
+.email-capture-form {
+  display: flex;
+  gap: 8px;
+  max-width: 420px;
+}
+.email-capture-form input[type="email"] {
+  flex: 1;
+  min-width: 0;
+  padding: 9px 12px;
+  font: inherit;
+  font-size: 0.9rem;
+  color: var(--ink);
+  background: var(--bg);
+  border: 1px solid var(--ink);
+  border-radius: 0;
+}
+.email-capture-form input[type="email"]:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 1px;
+}
+.email-capture-form button {
+  padding: 9px 18px;
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--bg);
+  background: var(--ink);
+  border: 1px solid var(--ink);
+  border-radius: 0;
+  cursor: pointer;
+  transition: background 200ms ease, border-color 200ms ease;
+}
+.email-capture-form button:hover,
+.email-capture-form button:focus-visible {
+  background: var(--accent);
+  border-color: var(--accent);
+  outline: none;
+}
+@media (max-width: 480px) {
+  .email-capture-form { flex-direction: column; }
+}
+
+/* Home variant sits in the padded flow below the hero */
+.home-email {
+  margin: 0 64px;
+}
+.home-email .email-capture { margin-top: 40px; }
+@media (max-width: 900px) {
+  .home-email { margin: 0 22px; }
+}
+
 /* ---- Dark mode tokens ----
    Toggling is done via [data-theme="dark"] on <html>.
    System preference handled in JS (theme.js) so it can persist user override. */

@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-01",
+  "updated": "2026-07-02",
   "prints": [
     {
       "handle": "esso-after-dark-fuji-matte",
@@ -604,18 +604,6 @@
         "Red / 11oz",
         "Light Green / 11oz",
         "Blue / 11oz"
-      ]
-    },
-    {
-      "handle": "print-logo-coffee-mug-15oz",
-      "title": "Print + Logo Coffee Mug, 15oz",
-      "series": null,
-      "year": null,
-      "limited": false,
-      "fromPrice": 12.58,
-      "image": "https://cdn.shopify.com/s/files/1/0723/0541/0362/files/9675362653372445692_2048.jpg?v=1731285007",
-      "variants": [
-        "15oz"
       ]
     },
     {
