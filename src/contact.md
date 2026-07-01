@@ -5,7 +5,7 @@ subtitle: Hello — say hello
 permalink: /contact/
 ---
 
-For prints: [shop.newplace2frown.com](https://shop.newplace2frown.com).
+For prints: [the prints page](/prints/), or [the shop]({{ site.shopUrl }}) directly.
 
 For commissions, collaborations, exhibitions, or anything else:
 

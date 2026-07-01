@@ -1,0 +1,634 @@
+{
+  "updated": "2026-07-01",
+  "prints": [
+    {
+      "handle": "esso-after-dark-fuji-matte",
+      "title": "Esso After Dark",
+      "series": "Lancaster",
+      "year": "2020",
+      "limited": true,
+      "fromPrice": 20,
+      "image": "https://cdn.shopify.com/s/files/1/0723/0541/0362/products/51d71ab623a94b77a5f6b56830744b4a.jpg?v=1691513270",
+      "variants": [
+        "21cm x 30cm, 8.3inches x 11.7inches / Print only",
+        "30cm x 42cm, 11.7inches x 16.5inches / Black"
+      ]
+    },
+    {
+      "handle": "landing_at_juffureh_8bit_fujimatte_border",
+      "title": "Landing At Juffureh",
+      "series": "The Gambia",
+      "year": "2019",
+      "limited": true,
+      "fromPrice": 20,
+      "image": "https://cdn.shopify.com/s/files/1/0723/0541/0362/products/3d22985a80f64901a18c39e083a2e06c.jpg?v=1691513217",
+      "variants": [
+        "21cm x 30cm, 8.3inches x 11.7inches / Print only",
+        "30cm x 42cm, 11.7inches x 16.5inches / Black"
+      ]
+    },
+    {
+      "handle": "riding-to-the-sunset-morecambe-bay",
+      "title": "Riding to the Sunset",
+      "series": "Morecambe",
+      "year": "2021",
+      "limited": true,
+      "fromPrice": 100,
+      "image": "https://cdn.shopify.com/s/files/1/0723/0541/0362/products/efc5ca62cb03466386100221958efe86.jpg?v=1691513311",
+      "variants": [
+        "30cm x 42cm, 11.7inches x 16.5inches / Black"
+      ]
+    },
+    {
+      "handle": "amodou_wave",
+      "title": "Amodou Wave",
+      "series": "The Gambia",
+      "year": "2019",
+      "limited": false,
+      "fromPrice": 20,
+      "image": "https://cdn.shopify.com/s/files/1/0723/0541/0362/products/1e7ec097c39d41fea7858dadcb8a4241.jpg?v=1691513196",
+      "variants": [
+        "21cm x 30cm, 8.3inches x 11.7inches / Print only",
+        "30cm x 42cm, 11.7inches x 16.5inches / Black"
+      ]
+    },
+    {
+      "handle": "an-apocalyptic-end-to-the-day-morecambe-2021",
+      "title": "An apocalyptic end to the day",
+      "series": "Morecambe",
+      "year": "2021",
+      "limited": false,
+      "fromPrice": 100,
+      "image": "https://cdn.shopify.com/s/files/1/0723/0541/0362/products/d6dbcf1594c5454488c335f8d3ce777c.jpg?v=1691513348",
+      "variants": [
+        "30cm x 42cm, 11.7inches x 16.5inches / Black"
+      ]
+    },
+    {
+      "handle": "aneurin-bevan_pearl",
+      "title": "Aneurin Bevan Archival Print",
+      "series": "Cardiff",
+      "year": null,
+      "limited": false,
+      "fromPrice": 20,
+      "image": "https://cdn.shopify.com/s/files/1/0723/0541/0362/files/97375232c127440dad0a4a3d26cd4588.jpg?v=1720962059",
+      "variants": [
+        "30cm x 42cm, 11.7inches x 16.5inches / Print only",
+        "30cm x 42cm, 11.7inches x 16.5inches / Black",
+        "21cm x 30cm, 8.3inches x 11.7inches / Print only"
+      ]
+    },
+    {
+      "handle": "b-army-surplus-fuji-pearl-border",
+      "title": "B-Army Surplus Fuji Pearl Border",
+      "series": null,
+      "year": null,
+      "limited": false,
+      "fromPrice": 20,
+      "image": "https://cdn.shopify.com/s/files/1/0723/0541/0362/products/6378f21b9c99491ebef92dadd281d4ac.jpg?v=1691513559",
+      "variants": [
+        "21cm x 30cm, 8.3inches x 11.7inches / Print only",
+        "30cm x 42cm, 11.7inches x 16.5inches / Black"
+      ]
+    },
+    {
+      "handle": "baygateway_8bit_fuji_matt",
+      "title": "Bay Gateway",
+      "series": "Morecambe",
+      "year": null,
+      "limited": false,
+      "fromPrice": 20,
+      "image": "https://cdn.shopify.com/s/files/1/0723/0541/0362/products/fe33b776a1344c04aa8e4aa22ab37eca.jpg?v=1691513206",
+      "variants": [
+        "21cm x 30cm, 8.3inches x 11.7inches / Print only",
+        "30cm x 42cm, 11.7inches x 16.5inches / Black"
+      ]
+    },
+    {
+      "handle": "beach-rider-pearl",
+      "title": "Beach Rider",
+      "series": "The Gambia",
+      "year": "2023",
+      "limited": false,
+      "fromPrice": 20,
+      "image": "https://cdn.shopify.com/s/files/1/0723/0541/0362/products/145b4e6a3ab7404fbc6981fda65ec023.jpg?v=1691513506",
+      "variants": [
+        "21cm x 30cm, 8.3inches x 11.7inches / Print only",
+        "30cm x 42cm, 11.7inches x 16.5inches / Black"
+      ]
+    },
+    {
+      "handle": "cardiff-reflections",
+      "title": "Cardiff Reflections",
+      "series": "Cardiff",
+      "year": null,
+      "limited": false,
+      "fromPrice": 20,
+      "image": "https://cdn.shopify.com/s/files/1/0723/0541/0362/products/f96e75d4717d4685b68f14a8f0864c54.jpg?v=1691513357",
+      "variants": [
+        "21cm x 30cm, 8.3inches x 11.7inches / Print only",
+        "30cm x 42cm, 11.7inches x 16.5inches / Black"
+      ]
+    },
+    {
+      "handle": "dog-on-senegambia-beach-f_pearl",
+      "title": "Dog on Senegambia beach",
+      "series": "The Gambia",
+      "year": "2023",
+      "limited": false,
+      "fromPrice": 20,
+      "image": "https://cdn.shopify.com/s/files/1/0723/0541/0362/products/616f5e0051434613a58be083ed3277de.jpg?v=1691513516",
+      "variants": [
+        "21cm x 30cm, 8.3inches x 11.7inches / Print only",
+        "30cm x 42cm, 11.7inches x 16.5inches / Black"
+      ]
+    },
+    {
+      "handle": "eating-plus_fuji-matt",
+      "title": "Eating Plus",
+      "series": "Lancaster",
+      "year": "2020",
+      "limited": false,
+      "fromPrice": 20,
+      "image": "https://cdn.shopify.com/s/files/1/0723/0541/0362/products/6078f4c793874f8dbd885ee464550241.jpg?v=1691513260",
+      "variants": [
+        "21cm x 30cm, 8.3inches x 11.7inches / Print only",
+        "30cm x 42cm, 11.7inches x 16.5inches / Black"
+      ]
+    },
+    {
+      "handle": "encroaching-shadows",
+      "title": "Encroaching Shadows",
+      "series": null,
+      "year": null,
+      "limited": false,
+      "fromPrice": 20,
+      "image": "https://cdn.shopify.com/s/files/1/0723/0541/0362/products/d0a689a256ff4713b9481e18b0f70c83.jpg?v=1691513154",
+      "variants": [
+        "21cm x 30cm, 8.3inches x 11.7inches / Print only",
+        "30cm x 42cm, 11.7inches x 16.5inches / Black"
+      ]
+    },
+    {
+      "handle": "family-outing-on-morecambe-bay",
+      "title": "Family outing on Morecambe Bay",
+      "series": "Morecambe",
+      "year": null,
+      "limited": false,
+      "fromPrice": 20,
+      "image": "https://cdn.shopify.com/s/files/1/0723/0541/0362/products/4388036c39f8450a8617a410307f244e.jpg?v=1691513548",
+      "variants": [
+        "21cm x 30cm, 8.3inches x 11.7inches / Print only",
+        "30cm x 42cm, 11.7inches x 16.5inches / Black"
+      ]
+    },
+    {
+      "handle": "fantastic-morecambe-2019",
+      "title": "Fantastic",
+      "series": "Morecambe",
+      "year": "2019",
+      "limited": false,
+      "fromPrice": 20,
+      "image": "https://cdn.shopify.com/s/files/1/0723/0541/0362/products/10f0baad7ea649f38558364fa7823e78.jpg?v=1691513367",
+      "variants": [
+        "21cm x 30cm, 8.3inches x 11.7inches / Print only",
+        "30cm x 42cm, 11.7inches x 16.5inches / Black"
+      ]
+    },
+    {
+      "handle": "football-on-senegambia-beach",
+      "title": "Football on Senegambia Beach",
+      "series": "The Gambia",
+      "year": "2023",
+      "limited": false,
+      "fromPrice": 20,
+      "image": "https://cdn.shopify.com/s/files/1/0723/0541/0362/products/34a05fd71fa84ca89461169088c42886.jpg?v=1691513377",
+      "variants": [
+        "21cm x 30cm, 8.3inches x 11.7inches / Print only",
+        "30cm x 42cm, 11.7inches x 16.5inches / Black"
+      ]
+    },
+    {
+      "handle": "senegambia-beach-girls_8bit_fuji-matte",
+      "title": "Girls on Senegambia Beach",
+      "series": "The Gambia",
+      "year": "2023",
+      "limited": false,
+      "fromPrice": 20,
+      "image": "https://cdn.shopify.com/s/files/1/0723/0541/0362/products/4c76e5eba35b43339ce65b423e0fca03.jpg?v=1691513538",
+      "variants": [
+        "21cm x 30cm, 8.3inches x 11.7inches / Print only",
+        "30cm x 42cm, 11.7inches x 16.5inches / Black"
+      ]
+    },
+    {
+      "handle": "give-respect",
+      "title": "Give Respect",
+      "series": "The Gambia",
+      "year": "2023",
+      "limited": false,
+      "fromPrice": 20,
+      "image": "https://cdn.shopify.com/s/files/1/0723/0541/0362/products/df47bdc5adca441aa10582bace472384.jpg?v=1691513388",
+      "variants": [
+        "21cm x 30cm, 8.3inches x 11.7inches / Print only",
+        "30cm x 42cm, 11.7inches x 16.5inches / Black"
+      ]
+    },
+    {
+      "handle": "kololi-blue",
+      "title": "Kololi Blue",
+      "series": "The Gambia",
+      "year": "2023",
+      "limited": false,
+      "fromPrice": 20,
+      "image": "https://cdn.shopify.com/s/files/1/0723/0541/0362/products/f20801f5d8c94f609a3473b68baa6aff.jpg?v=1691513398",
+      "variants": [
+        "21cm x 30cm, 8.3inches x 11.7inches / Print only",
+        "30cm x 42cm, 11.7inches x 16.5inches / Black"
+      ]
+    },
+    {
+      "handle": "lamin-crossovers-pearl",
+      "title": "Lamin Crossovers",
+      "series": "The Gambia",
+      "year": "2023",
+      "limited": false,
+      "fromPrice": 20,
+      "image": "https://cdn.shopify.com/s/files/1/0723/0541/0362/products/d2992bb24e72432081fc1947f69ce4f5.jpg?v=1691513453",
+      "variants": [
+        "21cm x 30cm, 8.3inches x 11.7inches / Print only",
+        "30cm x 42cm, 11.7inches x 16.5inches / Black"
+      ]
+    },
+    {
+      "handle": "leaving-cardiff",
+      "title": "Leaving Cardiff",
+      "series": "Cardiff",
+      "year": null,
+      "limited": false,
+      "fromPrice": 20,
+      "image": "https://cdn.shopify.com/s/files/1/0723/0541/0362/products/90577d55c76c4afd83d34b4c3ad1f0de.jpg?v=1691513164",
+      "variants": [
+        "21cm x 30cm, 8.3inches x 11.7inches / Print only",
+        "30cm x 42cm, 11.7inches x 16.5inches / Black"
+      ]
+    },
+    {
+      "handle": "mainway_8bit_fujimatt",
+      "title": "Mainway",
+      "series": "Lancaster",
+      "year": "2022",
+      "limited": false,
+      "fromPrice": 20,
+      "image": "https://cdn.shopify.com/s/files/1/0723/0541/0362/products/2bfb4f97ef8a489d85b57df7e879c21e.jpg?v=1691513228",
+      "variants": [
+        "21cm x 30cm, 8.3inches x 11.7inches / Print only",
+        "30cm x 42cm, 11.7inches x 16.5inches / Black"
+      ]
+    },
+    {
+      "handle": "man-under-the-bridge",
+      "title": "Man Under The Bridge",
+      "series": null,
+      "year": null,
+      "limited": false,
+      "fromPrice": 20,
+      "image": "https://cdn.shopify.com/s/files/1/0723/0541/0362/products/3f6ba3d14f4e4e2ea94e1fc25bce87e0.jpg?v=1691513175",
+      "variants": [
+        "21cm x 30cm, 8.3inches x 11.7inches / Print only",
+        "30cm x 42cm, 11.7inches x 16.5inches / Black"
+      ]
+    },
+    {
+      "handle": "memories-of-west-wales",
+      "title": "Memories of West Wales",
+      "series": "West Wales",
+      "year": null,
+      "limited": false,
+      "fromPrice": 20,
+      "image": "https://cdn.shopify.com/s/files/1/0723/0541/0362/products/f79a533355384f1d80e604092a1d5c14.jpg?v=1691513280",
+      "variants": [
+        "21cm x 30cm, 8.3inches x 11.7inches / Print only",
+        "30cm x 42cm, 11.7inches x 16.5inches / Black"
+      ]
+    },
+    {
+      "handle": "millenium_graff_fuji_pearl",
+      "title": "Millennium Graffiti",
+      "series": "Lancaster",
+      "year": null,
+      "limited": false,
+      "fromPrice": 20,
+      "image": "https://cdn.shopify.com/s/files/1/0723/0541/0362/products/0adfdf20ded04434ad791a51204e92ec.jpg?v=1691513442",
+      "variants": [
+        "21cm x 30cm, 8.3inches x 11.7inches / Print only",
+        "30cm x 42cm, 11.7inches x 16.5inches / Black"
+      ]
+    },
+    {
+      "handle": "morecambe-bay_8bit_fujimatt_",
+      "title": "Morecambe Bay Sunset",
+      "series": "Morecambe",
+      "year": null,
+      "limited": false,
+      "fromPrice": 20,
+      "image": "https://cdn.shopify.com/s/files/1/0723/0541/0362/products/af268665137049b78c6d3df8e1ac8884.jpg?v=1691513239",
+      "variants": [
+        "21cm x 30cm, 8.3inches x 11.7inches / Print only",
+        "30cm x 42cm, 11.7inches x 16.5inches / Black"
+      ]
+    },
+    {
+      "handle": "musicroomcorner_border_a3",
+      "title": "Music Room Corner",
+      "series": null,
+      "year": null,
+      "limited": false,
+      "fromPrice": 20,
+      "image": "https://cdn.shopify.com/s/files/1/0723/0541/0362/products/b1d6172c688c4941b9c65f0a6500f7bd.jpg?v=1691513143",
+      "variants": [
+        "21cm x 30cm, 8.3inches x 11.7inches / Print only",
+        "30cm x 42cm, 11.7inches x 16.5inches / Black"
+      ]
+    },
+    {
+      "handle": "neither-here-nor-there",
+      "title": "Neither Here Nor There",
+      "series": "Cardiff",
+      "year": "2020",
+      "limited": false,
+      "fromPrice": 20,
+      "image": "https://cdn.shopify.com/s/files/1/0723/0541/0362/products/a577fff2525f412da10b63f00b795286.jpg?v=1691513134",
+      "variants": [
+        "21cm x 30cm, 8.3inches x 11.7inches / Print only",
+        "30cm x 42cm, 11.7inches x 16.5inches / Black"
+      ]
+    },
+    {
+      "handle": "painting-in-a-window-fuji-pearl",
+      "title": "Painting in a Window",
+      "series": null,
+      "year": null,
+      "limited": false,
+      "fromPrice": 20,
+      "image": "https://cdn.shopify.com/s/files/1/0723/0541/0362/products/4745ce5383d64b11810d2839e171e900.jpg?v=1691513570",
+      "variants": [
+        "21cm x 30cm, 8.3inches x 11.7inches / Print only",
+        "30cm x 42cm, 11.7inches x 16.5inches / Black"
+      ]
+    },
+    {
+      "handle": "palma-airport",
+      "title": "Palma Airport",
+      "series": "Mallorca",
+      "year": null,
+      "limited": false,
+      "fromPrice": 20,
+      "image": "https://cdn.shopify.com/s/files/1/0723/0541/0362/products/b456f3c51a1f48d993ba9b4b278f0519.jpg?v=1691513291",
+      "variants": [
+        "21cm x 30cm, 8.3inches x 11.7inches / Print only",
+        "30cm x 42cm, 11.7inches x 16.5inches / Black"
+      ]
+    },
+    {
+      "handle": "pembrokeshire-coast",
+      "title": "Pembrokeshire Coast",
+      "series": "West Wales",
+      "year": null,
+      "limited": false,
+      "fromPrice": 20,
+      "image": "https://cdn.shopify.com/s/files/1/0723/0541/0362/products/8594c18899e8464297b00beb67b32fec.jpg?v=1691513302",
+      "variants": [
+        "21cm x 30cm, 8.3inches x 11.7inches / Print only",
+        "30cm x 42cm, 11.7inches x 16.5inches / Black"
+      ]
+    },
+    {
+      "handle": "senegambia-after-dark",
+      "title": "Senegambia After Dark",
+      "series": "The Gambia",
+      "year": null,
+      "limited": false,
+      "fromPrice": 20,
+      "image": "https://cdn.shopify.com/s/files/1/0723/0541/0362/products/5cf2e8ba6cca4e7d8325a973a99cd3d4.jpg?v=1691513320",
+      "variants": [
+        "21cm x 30cm, 8.3inches x 11.7inches / Print only",
+        "30cm x 42cm, 11.7inches x 16.5inches / Black"
+      ]
+    },
+    {
+      "handle": "senegambia-beach-pearl",
+      "title": "Senegambia Beach",
+      "series": "The Gambia",
+      "year": "2023",
+      "limited": false,
+      "fromPrice": 20,
+      "image": "https://cdn.shopify.com/s/files/1/0723/0541/0362/products/d3a44fc87a6d43078822cba795ddc987.jpg?v=1691513474",
+      "variants": [
+        "21cm x 30cm, 8.3inches x 11.7inches / Print only",
+        "30cm x 42cm, 11.7inches x 16.5inches / Black"
+      ]
+    },
+    {
+      "handle": "senegambia-beach-grove-pearl",
+      "title": "Senegambia Beach Grove Sunset",
+      "series": "The Gambia",
+      "year": "2023",
+      "limited": false,
+      "fromPrice": 20,
+      "image": "https://cdn.shopify.com/s/files/1/0723/0541/0362/products/c0c399f09eb24f16a4b2e2bdf1fbdbe3.jpg?v=1691513463",
+      "variants": [
+        "21cm x 30cm, 8.3inches x 11.7inches / Print only",
+        "30cm x 42cm, 11.7inches x 16.5inches / Black"
+      ]
+    },
+    {
+      "handle": "skerton-bridge-in-winter",
+      "title": "Skerton Bridge in Winter",
+      "series": "Lancaster",
+      "year": null,
+      "limited": false,
+      "fromPrice": 20,
+      "image": "https://cdn.shopify.com/s/files/1/0723/0541/0362/products/02aa6bb1a07843148816dfb408030656.jpg?v=1691513409",
+      "variants": [
+        "21cm x 30cm, 8.3inches x 11.7inches / Print only",
+        "30cm x 42cm, 11.7inches x 16.5inches / Black"
+      ]
+    },
+    {
+      "handle": "st-davids-polaroid",
+      "title": "St David's Polaroid",
+      "series": "West Wales",
+      "year": null,
+      "limited": false,
+      "fromPrice": 20,
+      "image": "https://cdn.shopify.com/s/files/1/0723/0541/0362/products/7998d162172046efb32890c99969f89d.jpg?v=1691513330",
+      "variants": [
+        "21cm x 30cm, 8.3inches x 11.7inches / Print only",
+        "30cm x 42cm, 11.7inches x 16.5inches / Black"
+      ]
+    },
+    {
+      "handle": "st-davids-sunset",
+      "title": "St David's Sunset",
+      "series": "West Wales",
+      "year": null,
+      "limited": false,
+      "fromPrice": 20,
+      "image": "https://cdn.shopify.com/s/files/1/0723/0541/0362/products/2d477edeb1bd4b2abec24acf3b513cd9.jpg?v=1691513340",
+      "variants": [
+        "21cm x 30cm, 8.3inches x 11.7inches / Print only",
+        "30cm x 42cm, 11.7inches x 16.5inches / Black"
+      ]
+    },
+    {
+      "handle": "glasgow-2021-pearl",
+      "title": "St Vincent Street",
+      "series": "Glasgow",
+      "year": "2021",
+      "limited": false,
+      "fromPrice": 20,
+      "image": "https://cdn.shopify.com/s/files/1/0723/0541/0362/products/c72c343f69224d8dad35f7fb30296bb4.jpg?v=1691513527",
+      "variants": [
+        "21cm x 30cm, 8.3inches x 11.7inches / Print only",
+        "30cm x 42cm, 11.7inches x 16.5inches / Black"
+      ]
+    },
+    {
+      "handle": "street-of-roses-palma-nova-mallorca-2021-pearl",
+      "title": "Street of Roses",
+      "series": "Mallorca",
+      "year": "2021",
+      "limited": false,
+      "fromPrice": 20,
+      "image": "https://cdn.shopify.com/s/files/1/0723/0541/0362/products/4b71e693c5b242dc8f2a13154bb60aee.jpg?v=1691513484",
+      "variants": [
+        "21cm x 30cm, 8.3inches x 11.7inches / Print only",
+        "30cm x 42cm, 11.7inches x 16.5inches / Black"
+      ]
+    },
+    {
+      "handle": "tea-at-the-midland-pearl",
+      "title": "Tea at the Midland",
+      "series": "Morecambe",
+      "year": "2021",
+      "limited": false,
+      "fromPrice": 20,
+      "image": "https://cdn.shopify.com/s/files/1/0723/0541/0362/products/890a294f8ef442fa9a96750406e4db34.jpg?v=1691513495",
+      "variants": [
+        "21cm x 30cm, 8.3inches x 11.7inches / Print only",
+        "30cm x 42cm, 11.7inches x 16.5inches / Black"
+      ]
+    },
+    {
+      "handle": "the-need-for-speed",
+      "title": "The Need For Speed",
+      "series": null,
+      "year": null,
+      "limited": false,
+      "fromPrice": 20,
+      "image": "https://cdn.shopify.com/s/files/1/0723/0541/0362/products/8743a8d06799482db8c1ce13976814f7.jpg?v=1691513186",
+      "variants": [
+        "21cm x 30cm, 8.3inches x 11.7inches / Print only",
+        "30cm x 42cm, 11.7inches x 16.5inches / Black"
+      ]
+    },
+    {
+      "handle": "the-pier-bookstore-morecambe",
+      "title": "The Old Pier Bookshop",
+      "series": "Morecambe",
+      "year": null,
+      "limited": false,
+      "fromPrice": 20,
+      "image": "https://cdn.shopify.com/s/files/1/0723/0541/0362/products/65318e8be4c146d0be08c5dbc4b55c6f.jpg?v=1691513420",
+      "variants": [
+        "21cm x 30cm, 8.3inches x 11.7inches / Print only",
+        "30cm x 42cm, 11.7inches x 16.5inches / Black"
+      ]
+    },
+    {
+      "handle": "the-wooden-crown",
+      "title": "The Wooden Crown",
+      "series": null,
+      "year": null,
+      "limited": false,
+      "fromPrice": 20,
+      "image": "https://cdn.shopify.com/s/files/1/0723/0541/0362/products/789f4f08bfa7465bb189c4a3b78cf3f1.jpg?v=1691513431",
+      "variants": [
+        "21cm x 30cm, 8.3inches x 11.7inches / Print only",
+        "30cm x 42cm, 11.7inches x 16.5inches / Black"
+      ]
+    },
+    {
+      "handle": "underpass_fuji_matt",
+      "title": "University Underpass",
+      "series": "Lancaster",
+      "year": "2023",
+      "limited": false,
+      "fromPrice": 20,
+      "image": "https://cdn.shopify.com/s/files/1/0723/0541/0362/products/d1024bc9bb3a4dbb9ab1783e9ef717fe.jpg?v=1691513250",
+      "variants": [
+        "21cm x 30cm, 8.3inches x 11.7inches / Print only",
+        "30cm x 42cm, 11.7inches x 16.5inches / Black"
+      ]
+    }
+  ],
+  "merch": [
+    {
+      "handle": "print-hoodie",
+      "title": "// PRINT HOODIE",
+      "series": null,
+      "year": null,
+      "limited": false,
+      "fromPrice": 35,
+      "image": "https://cdn.shopify.com/s/files/1/0723/0541/0362/files/9526159695146515398_2048.jpg?v=1705536980",
+      "variants": [
+        "White / S",
+        "Black / S",
+        "White / M",
+        "Black / M",
+        "White / L"
+      ]
+    },
+    {
+      "handle": "sunset-from-my-window-two-tone-coffee-mugs-11oz",
+      "title": "Sunset from my Window - Two-Tone Coffee Mugs, 11oz",
+      "series": null,
+      "year": null,
+      "limited": false,
+      "fromPrice": 12,
+      "image": "https://cdn.shopify.com/s/files/1/0723/0541/0362/files/13994197933923291367_2048.jpg?v=1705536639",
+      "variants": [
+        "Pink / 11oz",
+        "Yellow / 11oz",
+        "Red / 11oz",
+        "Light Green / 11oz",
+        "Blue / 11oz"
+      ]
+    },
+    {
+      "handle": "print-logo-coffee-mug-15oz",
+      "title": "Print + Logo Coffee Mug, 15oz",
+      "series": null,
+      "year": null,
+      "limited": false,
+      "fromPrice": 12.58,
+      "image": "https://cdn.shopify.com/s/files/1/0723/0541/0362/files/9675362653372445692_2048.jpg?v=1731285007",
+      "variants": [
+        "15oz"
+      ]
+    },
+    {
+      "handle": "print-and-logo-mug-15oz",
+      "title": "Print and Logo Mug, 15oz",
+      "series": null,
+      "year": null,
+      "limited": false,
+      "fromPrice": 15.62,
+      "image": "https://cdn.shopify.com/s/files/1/0723/0541/0362/files/1976199885584841041_2048.jpg?v=1731285577",
+      "variants": [
+        "15oz"
+      ]
+    }
+  ]
+}

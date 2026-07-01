@@ -733,6 +733,106 @@ h1, h2, h3 {
   color: var(--ink);
 }
 
+/* ---- Prints page ---- */
+
+.prints-intro {
+  max-width: var(--measure);
+  margin: 0 0 3rem;
+}
+.prints-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 48px 28px;
+}
+.print-card a {
+  display: block;
+  text-decoration: none;
+  color: var(--ink);
+}
+.print-card figure {
+  margin: 0 0 0.75rem;
+  aspect-ratio: 1 / 1;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+.print-card img {
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
+  transition: opacity 200ms ease;
+}
+.print-card a:hover img { opacity: 0.92; }
+.print-card a:hover .print-title { color: var(--accent); }
+.print-title {
+  font-family: var(--serif);
+  font-size: 1.05rem;
+  font-weight: 400;
+  line-height: 1.25;
+  margin: 0 0 0.3rem;
+}
+.print-tag {
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 0.75rem;
+  margin: 0;
+}
+.print-price { color: var(--ink); }
+.print-badge {
+  display: inline-block;
+  margin-top: 0.5rem;
+  padding: 2px 7px;
+  border: 1px solid var(--ink);
+  font-family: var(--mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.prints-merch {
+  margin-top: 4.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--rule);
+}
+.prints-merch h2 { font-size: 1.2rem; margin: 0 0 0.5rem; }
+.prints-footer {
+  margin-top: 3rem;
+  font-family: var(--mono);
+  font-size: 0.85rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+@media (max-width: 700px) {
+  .prints-grid { grid-template-columns: repeat(2, 1fr); gap: 36px 16px; }
+}
+@media (max-width: 420px) {
+  .prints-grid { grid-template-columns: 1fr; }
+}
+
+/* ---- Home: prints hook under the hero ---- */
+
+.home-shop-hook {
+  margin: 56px 64px 0;
+  border-top: 1px solid var(--rule);
+  padding: 24px 0 0;
+}
+.home-shop-hook a {
+  font-family: var(--serif);
+  font-size: 1.3rem;
+  text-decoration: none;
+  color: var(--ink);
+}
+.home-shop-hook a:hover { color: var(--accent); }
+.home-shop-hook .latest-label { margin-bottom: 6px; }
+@media (max-width: 900px) {
+  .home-shop-hook { margin: 40px 22px 0; }
+}
+
 /* ---- Dark mode tokens ----
    Toggling is done via [data-theme="dark"] on <html>.
    System preference handled in JS (theme.js) so it can persist user override. */

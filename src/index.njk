@@ -13,6 +13,11 @@ heroImages:
 <section class="home">
   {% include "partials/hero-rotator.njk" %}
 
+  <aside class="home-shop-hook">
+    <span class="latest-label">Prints</span>
+    <a href="/prints/">{{ products.prints.length }} photographs available as archival prints — from £20&nbsp;→</a>
+  </aside>
+
   {% set latestJournal = collections.journal | reverse | first %}
   {% if latestJournal %}
     <aside class="latest">

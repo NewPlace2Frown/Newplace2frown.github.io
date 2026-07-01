@@ -11,14 +11,12 @@
     "build": "eleventy",
     "optimise:images": "node scripts/optimise-images.mjs",
     "test": "vitest run",
-    "test:watch": "vitest",
-    "prepare": "husky install"
+    "test:watch": "vitest"
   },
   "devDependencies": {
     "@11ty/eleventy": "^3.0.0",
     "@11ty/eleventy-plugin-rss": "^3.0.0",
     "cross-env": "^10.1.0",
-    "husky": "^8.0.0",
     "linkedom": "^0.18.0",
     "sharp": "^0.34.5",
     "vitest": "^2.1.0"

@@ -25,6 +25,7 @@ npm run dev:clean    # clean + dev in one
 ```
 src/
   index.njk                  homepage with rotating hero
+  prints.njk                 /prints/ — shop window, grid of every print, links to Shopify
   about.md, contact.md, work.md
   shrine.njk                 easter-egg page (do not link)
   projects/                  series pages (markdown frontmatter -> project.njk)
@@ -34,6 +35,7 @@ src/
     partials/                sidebar.njk, head-meta.njk, hero-rotator.njk, socials.njk
   _data/
     site.js                  global config: title, nav, socials, shopUrl, formspreeEndpoint
+    products.json            print catalogue exported from Shopify (see "The prints page")
     work.js                  curated highlight image list for /work/
     guestbook.json           moderated shrine guestbook entries
     shrineImages.js          gallery list built from project frontmatter
@@ -57,8 +59,21 @@ tests/
 scripts/
   optimise-images.mjs        resize + recompress assets/media/ in place
 
-docs/superpowers/            specs, plans, and runbooks for major changes
+docs/
+  journal-templates/         copy-paste frontmatter templates for journal posts
+  shrine-content.md          shrine guestbook moderation runbook
 ```
+
+## The prints page
+
+`/prints/` renders every active print from `src/_data/products.json` as a card that
+links to its product page on the Shopify store (`site.shopUrl` in `src/_data/site.js`).
+
+`products.json` is a snapshot of the Shopify catalogue (handle, title, series, year,
+price, CDN image). It is not fetched at build time — the Starter-plan store has no
+public products endpoint — so re-export it (via the Shopify MCP / Admin API) after
+adding products or changing prices. Images are served from Shopify's CDN with a
+`&width=720` resize parameter.
 
 ## Adding a project
 
@@ -89,17 +104,16 @@ docs/superpowers/            specs, plans, and runbooks for major changes
 
 ## The shrine (easter egg page)
 
-`/shrine/` is a deliberately unlinked Win98-pastiche page reachable via three triggers (Konami code on any page, typing "frown" anywhere outside form fields, or a console hint on the homepage). Includes a guestbook backed by [Formspree](https://formspree.io/); see `docs/superpowers/shrine-content.md` for the moderation runbook.
+`/shrine/` is a deliberately unlinked Win98-pastiche page reachable via three triggers (Konami code on any page, typing "frown" anywhere outside form fields, or a console hint on the homepage). Includes a guestbook backed by [Formspree](https://formspree.io/); see `docs/shrine-content.md` for the moderation runbook.
 
 ## Deployment
 
-Push to `main` triggers `.github/workflows/deploy.yml`, which runs the test suite, builds, and uploads `_site/` as a Pages artifact. Pages source must be set to **GitHub Actions** in repo Settings -> Pages.
+Push to `main` triggers `.github/workflows/deploy.yml`, which runs the test suite, builds, and uploads `_site/` as a Pages artifact. Pages source must be set to **GitHub Actions** in repo Settings -> Pages. CI is the test gate — there are no local git hooks.
 
-The `pre-push` git hook (Husky) runs `npm test` locally before any push.
+## Domains
 
-## Custom domain
-
-`CNAME` contains `newplace2frown.com`. DNS A/AAAA records point at GitHub's Pages servers; no `www` configured.
+- `CNAME` contains `newplace2frown.com`. DNS A/AAAA records point at GitHub's Pages servers; no `www` configured. DNS lives in Google Cloud DNS.
+- The shop should live at `shop.newplace2frown.com`: add a CNAME record `shop` -> `shops.myshopify.com` in Google Cloud DNS, then connect the domain in Shopify admin (Settings -> Domains -> Connect existing domain). Afterwards flip `shopUrl` in `src/_data/site.js`.
 
 ## Notes
 

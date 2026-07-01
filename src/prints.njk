@@ -1,0 +1,48 @@
+---
+layout: layouts/base.njk
+title: Prints
+permalink: /prints/
+---
+<header class="page-header">
+  <h1>Prints</h1>
+  <p class="page-subtitle">Limited and open editions / printed to order / shipped from the UK</p>
+</header>
+
+<div class="prints-intro">
+  <p>Work from the field, available as fine art prints. Limited editions are signed and numbered; open editions are printed to order on archival paper. Prices start at £20 for an A4 print.</p>
+  <p>Every purchase goes through the shop's secure Shopify checkout.</p>
+</div>
+
+<section class="prints-grid" aria-label="Available prints">
+{% for p in products.prints %}
+  <article class="print-card{% if p.limited %} is-limited{% endif %}">
+    <a href="{{ site.shopUrl }}/products/{{ p.handle }}" rel="noopener">
+      <figure>
+        <img src="{{ p.image }}&width=720" alt="{{ p.title }}{% if p.series %} — {{ p.series }}{% endif %}" loading="lazy" decoding="async">
+      </figure>
+      <div class="print-meta">
+        <h2 class="print-title">{{ p.title }}</h2>
+        <p class="print-tag">
+          {% if p.series %}<span>{{ p.series }}</span>{% endif %}
+          {% if p.year %}<span>{{ p.year }}</span>{% endif %}
+          <span class="print-price">from £{{ p.fromPrice | round }}</span>
+        </p>
+        {% if p.limited %}<span class="print-badge">Limited edition</span>{% endif %}
+      </div>
+    </a>
+  </article>
+{% endfor %}
+</section>
+
+{% if products.merch.length %}
+<aside class="prints-merch">
+  <h2>Also in the shop</h2>
+  <p>
+    {% for m in products.merch %}<a href="{{ site.shopUrl }}/products/{{ m.handle }}" rel="noopener">{{ m.title }}</a>{% if not loop.last %} · {% endif %}{% endfor %}
+  </p>
+</aside>
+{% endif %}
+
+<p class="prints-footer">
+  <a href="{{ site.shopUrl }}" rel="noopener">Browse the full shop →</a>
+</p>

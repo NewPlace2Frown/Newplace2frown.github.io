@@ -16,6 +16,6 @@ Hailing from Lancaster, in the north west of England, I've documented people, pl
 
 From the age of fifteen, when an art teacher introduced me to Bresson's "decisive moment" alongside Robert Shore's *Post-Photography*, I've been trying to capture the world through the 3:2 frame of a camera — somewhere between traditional photojournalism and contemporary fine-art documentary practice. The contradiction between art, truth, and beauty is the thing I keep coming back to. I want the work to make people question the "truth" of what they're looking at.
 
-If you'd like a print, the [shop is here](https://shop.newplace2frown.com). If you'd like to talk about a commission, collaboration, or anything else, [get in touch](/contact/).
+If you'd like a print, [browse the prints](/prints/) — every image there links straight to the shop. If you'd like to talk about a commission, collaboration, or anything else, [get in touch](/contact/).
 
 —Leon

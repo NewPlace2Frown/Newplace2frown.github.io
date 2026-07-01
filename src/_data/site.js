@@ -2,7 +2,10 @@ export default {
   title: 'NewPlace2Frown',
   tagline: 'Documentary photography by Leon Morgan',
   url: 'https://newplace2frown.com',
-  shopUrl: 'https://shop.newplace2frown.com',
+  // Flip to 'https://shop.newplace2frown.com' once the subdomain is connected
+  // in Shopify admin (Settings → Domains). Until then the myshopify domain is
+  // the only one that resolves; after connection it 301s to the custom domain.
+  shopUrl: 'https://newplace2frown.myshopify.com',
   formspreeEndpoint: 'https://formspree.io/f/mjglbenq',
   author: {
     name: 'Leon Morgan',
